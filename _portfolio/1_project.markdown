@@ -9,9 +9,16 @@ img: /img/12.jpg
 <h3>Recommender System</h3>
 <br/>
 
-<h4>Data</h4>
+<h4>Objective</h4>
 
-Dataset: Amazon Review Data
+<br/>
+<h4>Data</h4>
+Data: Amazon's Product Review and Data, 1996 - 2014<br>
+File: gzip file containing json within<br>
+<br>
+The dataset consists of over 142 million reviews, of which 22 million are book reviews.<br>
+However, due to memory constraints, I decided to reduce its size to about 100k, by setting<br>
+a minimum of 40 reviews for each book and each item.
 
 
 <div class="img_row">
