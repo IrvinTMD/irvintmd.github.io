@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Project 01 GA
-description: a project with a background image
+description: Pokemon Stay
 img: /img/2.jpg
 ---
 
