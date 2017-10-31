@@ -13,13 +13,15 @@ img: /img/12.jpg
 
 <br/>
 <h4>Data</h4>
-Data: Amazon's Product Review and Data, 1996 - 2014<br>
+<p>Data: Amazon's Product Review and Data, 1996 - 2014<br>
 File: gzip file containing json within<br>
 <br>
 The dataset consists of over 142 million reviews, of which 22 million are book reviews.<br>
-However, due to memory constraints, I decided to reduce its size to about 100k, by setting<br>
-a minimum of 40 reviews for each book and each item.
+However, due to memory constraints, I decided to reduce the book review data size to <br>
+about 100k, by setting a minimum of 40 reviews for each book (item) and each user.</p>
 
+<h4>Clean and Prepare Data</h4>
+<p>There is..</p>
 
 <div class="img_row">
 	<img class="col one" src="{{ site.baseurl }}/img/1.jpg" alt="" title="example image"/>
