@@ -11,6 +11,9 @@ I am <a href="http://linkedin.com/in/irvintmd" target="blank">Irvin</a>. I am a 
 
 Python, Machine Learning, Deep Learning, TensorFlow, Recommender System, Anomaly Detection 
 
+SQL, PostGres, Hadoop, Spark, AWS, Google Cloud
+
+
 
 
 <br/>
