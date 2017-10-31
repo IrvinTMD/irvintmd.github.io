@@ -14,8 +14,6 @@ Python, Machine Learning, Deep Learning, TensorFlow, Recommender System, Anomaly
 SQL, PostGres, Hadoop, Spark, AWS, Google Cloud
 
 
-
-
 <br/>
 <hr/>
 <br/>
