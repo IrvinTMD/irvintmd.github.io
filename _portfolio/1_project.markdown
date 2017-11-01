@@ -48,8 +48,7 @@ img: /img/12.jpg
     	return pd.DataFrame.from_dict(df, orient='index')
 	{% endhighlight %}
 
-	<br>
-	<br>
+	
 	Initially, I attempt computing with 8 million book reviews, which took a serious toll on my
 	system. It couldn't even finish computing! Thereafter, I reduced the size bit by bit, but
 	unfortunately, the computation time was still high. Upon further consideration, as my purpose
