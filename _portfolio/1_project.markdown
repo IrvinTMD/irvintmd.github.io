@@ -49,12 +49,12 @@ img: /img/12.jpg
 	{% endhighlight %}
 
 	<br>
-	
 	Initially, I attempt computing with 8 million book reviews, which took a serious toll on my
 	system. It couldn't even finish computing! Thereafter, I reduced the size bit by bit, but
 	unfortunately, the computation time was still high. Upon further consideration, as my purpose
 	for the project was only to gain mastery of the methods for Collaborative Filtering, I shrunk
-	the data to about 100 thousand reviews, by setting a minimum of 40 reviews for each user/item.<br>
+	the data to about 100 thousand reviews, by setting a minimum of 40 reviews for each user/item.
+	<br>
 
 	{% highlight python %}
 	def downsize(df, u_col, i_col, min_r_count):
