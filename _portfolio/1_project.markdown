@@ -9,7 +9,8 @@ img: /img/12.jpg
 <h3>Recommender System</h3>
 <br/>
 
-<h4>&nbsp;Objective</h4>
+<h4>Objective</h4>
+<p><font size="5"></font></p>
 <p>The aim of this project is to dive into the world of Recommender Systems, and explore
 	various methods for Collaborative Filtering. The focus will be on understanding the math
 	and algorithm behind them, then applying them to generate recommendations. Although I
@@ -18,7 +19,7 @@ img: /img/12.jpg
 	existing ratings themselves. Therefore, it is considered item-agnostic.
 
 
-<h4>&emsp;Data</h4>
+<h4>Data</h4>
 <p>Data: Amazon's Product Review and Data, 1996 - 2014<br>
 File: gzip file containing json within<br>
 <br>
@@ -26,7 +27,7 @@ The dataset consists of over 142 million reviews, of which 22 million are book r
 However, I will only be using about 100 thousand book reviews due to time/memory constraints,<br>
 by setting a minimum of 40 reviews for each book (item) and each user.</p>
 
-<strong><h4>Clean and Prepare Data</h4></strong>
+<h4>Clean and Prepare Data</h4>
 <p>There is..</p>
 
 <div class="img_row">
