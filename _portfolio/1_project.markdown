@@ -48,6 +48,7 @@ img: /img/12.jpg
     	return pd.DataFrame.from_dict(df, orient='index')
 	{% endhighlight %}
 
+	<br>
 	
 	Initially, I attempt computing with 8 million book reviews, which took a serious toll on my
 	system. It couldn't even finish computing! Thereafter, I reduced the size bit by bit, but
@@ -55,7 +56,7 @@ img: /img/12.jpg
 	for the project was only to gain mastery of the methods for Collaborative Filtering, I shrunk
 	the data to about 100 thousand reviews, by setting a minimum of 40 reviews for each user/item.<br>
 
-	{% hightlight python %}
+	{% highlight python %}
 	def downsize(df, u_col, i_col, min_r_count):
     	"""
     	Takes in a dataframe that includes columns "user", "item", "ratings"
