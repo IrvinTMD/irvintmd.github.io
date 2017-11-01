@@ -10,15 +10,21 @@ img: /img/12.jpg
 <br/>
 
 <h4>Objective</h4>
+<p>The aim of this project is to dive into the world of Recommender Systems, and explore
+	various methods for Collaborative Filtering. The focus will be on understanding the math
+	and algorithm behind them, then applying them to generate recommendations. Although I
+	chose book reviews, it does not actually matter what the item is. Collaborative Filtering
+	is based on seeking similar reviews amongst users/items, and predicting ratings from the
+	existing ratings themselves. Therefore, it is considered item-agnostic.
 
-<br/>
+
 <h4>Data</h4>
 <p>Data: Amazon's Product Review and Data, 1996 - 2014<br>
 File: gzip file containing json within<br>
 <br>
 The dataset consists of over 142 million reviews, of which 22 million are book reviews.<br>
-However, due to memory constraints, I decided to reduce the book review data size to <br>
-about 100k, by setting a minimum of 40 reviews for each book (item) and each user.</p>
+However, I will only be using about 100 thousand book reviews due to time/memory constraints,<br>
+by setting a minimum of 40 reviews for each book (item) and each user.</p>
 
 <h4>Clean and Prepare Data</h4>
 <p>There is..</p>
