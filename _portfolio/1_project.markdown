@@ -9,7 +9,7 @@ img: /img/12.jpg
 <h3>Recommender System</h3>
 <br/>
 
-<h4>Objective</h4>
+<center><h4>Objective</h4></center>
 <p>The aim of this project is to dive into the world of Recommender Systems, and explore
 	various methods for Collaborative Filtering. The focus will be on understanding the math
 	and algorithm behind them, then applying them to generate recommendations. Although I
