@@ -99,7 +99,15 @@ img: /img/12.jpg
 	{% endhighlight %}
 
 	<br>
-
+	From the downsized dataframe, we have 1490 unique users, and 1186 unique items/books. Some
+	exploratory work was done to view users/items with the highest number of reviews. I also
+	created a dataframe to reference books with their original ID, name, and a new sequential
+	ID obtained by using LabelEncoder. This dataframe is mostly used for intuitively understanding
+	the recommendation results later.<br>
+	<br>
+	Before proceeding to split the data into train and test sets, I calculated the sparsity to
+	get a better understanding of what we are dealing with. The sparsity of the 100k reviews
+	data set is 93.85%.
 </p>
 
 <div class="img_row">
