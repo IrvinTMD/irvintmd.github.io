@@ -46,15 +46,16 @@ img: /img/12.jpg
         	df[i] = d
         	i += 1
     	return pd.DataFrame.from_dict(df, orient='index')
-	{% endhighlight %}<br>
+	{% endhighlight %}
 
+	<br>
 	<br>
 	Initially, I attempt computing with 8 million book reviews, which took a serious toll on my
 	system. It couldn't even finish computing! Thereafter, I reduced the size bit by bit, but
 	unfortunately, the computation time was still high. Upon further consideration, as my purpose
 	for the project was only to gain mastery of the methods for Collaborative Filtering, I shrunk
 	the data to about 100 thousand reviews, by setting a minimum of 40 reviews for each user/item.<br>
-	
+
 	{% hightlight python %}
 	def downsize(df, u_col, i_col, min_r_count):
     	"""
@@ -95,7 +96,9 @@ img: /img/12.jpg
     	print df[u_col].nunique(), 'users'
     	print df[i_col].nunique(), 'items'
     	return df
-	{% endhighlight %}<br>
+	{% endhighlight %}
+
+	<br>
 
 </p>
 
