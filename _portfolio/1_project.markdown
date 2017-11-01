@@ -30,8 +30,71 @@ img: /img/12.jpg
 </p>
 
 <h4>Clean and Prepare Data</h4>
-<p>	There is..
+<p>	The gzip data is loaded with the following functions. It takes a while to process, so, it is 
+	recommended to pickle the dataframes after loading.<br>
 
+	{% highlight python %}
+	def parse(path):
+   		g = gzip.open(path, 'rb')
+    	for l in g:
+        	yield eval(l)
+
+	def getDF(path):
+    	i = 0
+    	df = {}
+    	for d in parse(path):
+        	df[i] = d
+        	i += 1
+    	return pd.DataFrame.from_dict(df, orient='index')
+	{% endhighlight %}<br>
+	<br>
+	Initially, I attempt computing with 8 million book reviews, which took a serious toll on my
+	system. It couldn't even finish computing! Thereafter, I reduced the size bit by bit, but
+	unfortunately, the computation time was still high. Upon further consideration, as my purpose
+	for the project was only to gain mastery of the methods for Collaborative Filtering, I shrunk
+	the data to about 100 thousand reviews, by setting a minimum of 40 reviews for each user/item.<br>
+	{% hightlight python %}
+	def downsize(df, u_col, i_col, min_r_count):
+    	"""
+    	Takes in a dataframe that includes columns "user", "item", "ratings"
+    	and returns a new dataframe where users and items each have a
+    	minimum amount of ratings as specified.
+
+    	Arguments
+    	=========
+    
+    	df : (dataframe)
+        	Dataframe that has columns User, Item, and Ratings
+        
+    	u_col: (string)
+        	Name of User Column
+        
+    	i_col: (string)
+        	Name of Item Column
+
+    	min_r_count: (int)
+        	Mininum number of ratings for each user and item
+        
+    	"""
+    	size = df.shape[0]
+    	while True:
+        	user5 = df.groupby(u_col).size().reset_index(name='count')
+        	user5 = user5[user5['count'] < min_r_count]
+        	df = df[~df[u_col].isin(user5[u_col])]
+
+        	item5 = df.groupby(i_col).size().reset_index(name='count')
+        	item5 = item5[item5['count'] < min_r_count]
+        	df = df[~df[i_col].isin(item5[i_col])]
+        	print df.shape
+       		if df.shape[0] == size:
+            	break
+        	else:
+            	size = df.shape[0]
+    	print df[u_col].nunique(), 'users'
+    	print df[i_col].nunique(), 'items'
+    	return df
+	{% endhighlight %}<br>
+	
 </p>
 
 <div class="img_row">
