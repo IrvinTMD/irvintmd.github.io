@@ -142,7 +142,8 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 </p>
 
 <b><font size="+1">Matrix Factorization using ALS and SGD</font></b>
-<p>
+<p>	Alternating Least Squares (ALS) is where we hold one set of latent vectors constant, while 
+	solving for the other. 
 	
 
 
