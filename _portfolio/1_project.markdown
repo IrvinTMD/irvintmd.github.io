@@ -5,12 +5,18 @@ description: Capstone Project at GA
 img: /img/12.jpg
 ---
 
+November 17, 2017<br>
+This is my capstone project for the Data Science Immersive program at GA. The program is a 12-week 
+full-time course with five projects in total. It covers a very wide range of Data Science topics, 
+but unfortunately for me, Recommender Systems were only covered for about half a day, in week 11! 
+Therefore, the entire project was pretty much a self-learning journey, from scratch. 
+
 <b><font size="+1">Objective</font></b>
 <p>	The aim of this project is to dive into the world of Recommender Systems, and explore various 
 	methods for Collaborative Filtering. The focus will be on understanding the math and algorithm 
 	behind them, then applying them to generate recommendations. Although I chose book reviews, 
-	it does not actually matter what the item is. Collaborative Filtering is based on seeking similar 
-	reviews amongst users/items, and predicting ratings from the existing ratings themselves. 
+	it does not actually matter what the rated item is. Collaborative Filtering is based on seeking 
+	similar reviews amongst users/items, and predicting ratings from the existing ratings themselves. 
 	Therefore, it is considered item-agnostic.
 </p>
 
@@ -94,7 +100,7 @@ img: /img/12.jpg
     	return df
 	{% endhighlight %}
 
-	<br>
+<br>
 	From the downsized dataframe, we have 1490 unique users, and 1186 unique items/books. Some
 	exploratory work was done to view users/items with the highest number of reviews. I also
 	created a dataframe to reference books with their original ID, name, and a new sequential
@@ -117,6 +123,7 @@ img: /img/12.jpg
 	There are a few ways to do this. In this case, we will split a user's ratings into two. This 
 	means, if a user has rated 40 items, the train set would have 25, and the test, 15. The ratings
 	do not overlap, and both train and test sets are disjoint.<br>
+
 	{% highlight python %}
 
 	def train_test_split(ratings, size):
