@@ -4,7 +4,6 @@ title: Recommender System
 description: Capstone Project at GA
 img: /img/12.jpg
 ---
-
 November 17, 2017<br>
 This is my capstone project for the Data Science Immersive program at GA. The program is a 12-week 
 full-time course with five projects in total. It covers a very wide range of Data Science topics, 
@@ -112,7 +111,7 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 	data set is 93.85%.
 </p>
 
-<h4>Train-Test Split</h4>
+<b><font size="+1">Train-Test Split</font></b>
 <p>
 	In most traditional Machine Learning applications, train-test splits can be performed by simply
 	separating a random selection of rows in the data. However, in Collaborative Filtering, that
@@ -142,7 +141,7 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 	{% endhighlight %}
 </p>
 
-<h4>Matrix Factorization using ALS and SGD</h4>
+<b><font size="+1">Matrix Factorization using ALS and SGD</font></b>
 <p>
 	
 
