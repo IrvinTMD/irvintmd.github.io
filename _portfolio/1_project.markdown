@@ -14,7 +14,7 @@ img: /img/12.jpg
 	Therefore, <b>it is</b> considered item-agnostic.
 </p>
 
-<b><font size="14">Data</font></b>
+<i><font size="16">Data</font></i>
 <p>	Data: Amazon's Product Review and Data, 1996 - 2014<br>
 	File: gzip file containing json within<br>
 	<br>
