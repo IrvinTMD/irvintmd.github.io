@@ -1,14 +1,11 @@
 ---
 layout: post
-title: Capstone Project GA
-description: a project with a background image
+title: Recommender System
+description: Capstone Project at GA
 img: /img/12.jpg
 ---
 
-
-<h3>Recommender System</h3>
-<br/>
-<h4>Objective</h4>
+<h3>Objective</h3>
 <p>	The aim of this project is to dive into the world of Recommender Systems, and explore various 
 	methods for Collaborative Filtering. The focus will be on understanding the math and algorithm 
 	behind them, then applying them to generate recommendations. Although I chose book reviews, 
