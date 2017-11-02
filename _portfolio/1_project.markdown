@@ -6,6 +6,7 @@ img: /img/12.jpg
 ---
 
 <h3>Objective</h3>
+<br>
 <p>	The aim of this project is to dive into the world of Recommender Systems, and explore various 
 	methods for Collaborative Filtering. The focus will be on understanding the math and algorithm 
 	behind them, then applying them to generate recommendations. Although I chose book reviews, 
