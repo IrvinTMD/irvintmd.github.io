@@ -5,13 +5,13 @@ description: Capstone Project at GA
 img: /img/12.jpg
 ---
 
-<b><font size="12">Objective</font></b>
+<u>Objective</u>
 <p>	The aim of this project is to dive into the world of Recommender Systems, and explore various 
 	methods for Collaborative Filtering. The focus will be on understanding the math and algorithm 
 	behind them, then applying them to generate recommendations. Although I chose book reviews, 
 	it does not actually matter what the item is. Collaborative Filtering is based on seeking similar 
 	reviews amongst users/items, and predicting ratings from the existing ratings themselves. 
-	Therefore, it is considered item-agnostic.
+	Therefore, <b>it is</b> considered item-agnostic.
 </p>
 
 <b><font size="14">Data</font></b>
