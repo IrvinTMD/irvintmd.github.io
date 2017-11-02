@@ -53,8 +53,7 @@ img: /img/12.jpg
 	system. It couldn't even finish computing! Thereafter, I reduced the size bit by bit, but
 	unfortunately, the computation time was still high. Upon further consideration, as my purpose
 	for the project was only to gain mastery of the methods for Collaborative Filtering, I shrunk
-	the data to about 100 thousand reviews, by setting a minimum of 40 reviews for each user/item.
-	<br>
+	the data to about 100 thousand reviews, by setting a minimum of 40 reviews for each user/item.<br>
 
 	{% highlight python %}
 	def downsize(df, u_col, i_col, min_r_count):
@@ -121,7 +120,6 @@ img: /img/12.jpg
 	There are a few ways to do this. In this case, we will split a user's ratings into two. This 
 	means, if a user has rated 40 items, the train set would have 25, and the test, 15. The ratings
 	do not overlap, and both train and test sets are disjoint.<br>
-	<br>
 	{% highlight python %}
 
 	def train_test_split(ratings, size):
@@ -146,7 +144,7 @@ img: /img/12.jpg
 
 
 
-	
+
 </p>
 
 <div class="img_row">
