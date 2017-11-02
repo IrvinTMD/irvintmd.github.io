@@ -110,6 +110,22 @@ img: /img/12.jpg
 	data set is 93.85%.
 </p>
 
+<h4>Train-Test Split</h4>
+<p>
+	In most traditional Machine Learning applications, train-test splits can be performed by simply
+	separating a random selection of rows in the data. However, in Collaborative Filtering, that
+	would not work because we will need all users to be in both train and test sets. If we randomly
+	take rows out, we will lose a batch of users.<br>
+	<br>
+	Therefore, what we need to do is to mask/remove some ratings for every user on the train set. 
+	There are a few ways to do this. In this case, we will split a user's ratings into two. This 
+	means, if a user has rated 40 items, the train set would have 25, and the test, 15. The ratings
+	do not overlap, and both train and test sets are disjoint.
+
+
+
+</p>
+
 <div class="img_row">
 	<img class="col one" src="{{ site.baseurl }}/img/1.jpg" alt="" title="example image"/>
 	<img class="col one" src="{{ site.baseurl }}/img/2.jpg" alt="" title="example image"/>
