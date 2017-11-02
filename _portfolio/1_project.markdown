@@ -5,7 +5,7 @@ description: Capstone Project at GA
 img: /img/12.jpg
 ---
 
-<b>Objective</b>
+<b><font size="+2">Objective</font></b>
 <p>	The aim of this project is to dive into the world of Recommender Systems, and explore various 
 	methods for Collaborative Filtering. The focus will be on understanding the math and algorithm 
 	behind them, then applying them to generate recommendations. Although I chose book reviews, 
