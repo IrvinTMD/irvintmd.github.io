@@ -5,7 +5,7 @@ description: Capstone Project at GA
 img: /img/12.jpg
 ---
 
-<ul><h4>Objective</h4></ul>	
+<strong><font size="20">Objective/font></strong>
 <p>	The aim of this project is to dive into the world of Recommender Systems, and explore various 
 	methods for Collaborative Filtering. The focus will be on understanding the math and algorithm 
 	behind them, then applying them to generate recommendations. Although I chose book reviews, 
@@ -14,7 +14,7 @@ img: /img/12.jpg
 	Therefore, it is considered item-agnostic.
 </p>
 
-<ul><h4>Data</h4></ul>
+<strong><font size="18">Data</font></strong>
 <p>	Data: Amazon's Product Review and Data, 1996 - 2014<br>
 	File: gzip file containing json within<br>
 	<br>
@@ -26,7 +26,7 @@ img: /img/12.jpg
 	R. He, J. McAuley. Modeling the visual evolution of fashion trends with one-class collaborative filtering. WWW, 2016
 </p>
 
-<h4>Clean and Prepare Data</h4>
+<strong><font size="16">Clean and Prepare Data</font></strong>
 <p>	The gzip data is loaded with the following functions. It takes a while to process, so, it is 
 	recommended to pickle the dataframes after loading.<br>
 
