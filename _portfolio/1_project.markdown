@@ -5,16 +5,16 @@ description: Capstone Project at GA
 img: /img/12.jpg
 ---
 
-<u>Objective</u>
+<b>Objective</b>
 <p>	The aim of this project is to dive into the world of Recommender Systems, and explore various 
 	methods for Collaborative Filtering. The focus will be on understanding the math and algorithm 
 	behind them, then applying them to generate recommendations. Although I chose book reviews, 
 	it does not actually matter what the item is. Collaborative Filtering is based on seeking similar 
 	reviews amongst users/items, and predicting ratings from the existing ratings themselves. 
-	Therefore, <b>it is</b> considered item-agnostic.
+	Therefore, it is considered item-agnostic.
 </p>
 
-<i><font size="16">Data</font></i>
+<b>Data</b>
 <p>	Data: Amazon's Product Review and Data, 1996 - 2014<br>
 	File: gzip file containing json within<br>
 	<br>
@@ -26,7 +26,7 @@ img: /img/12.jpg
 	R. He, J. McAuley. Modeling the visual evolution of fashion trends with one-class collaborative filtering. WWW, 2016
 </p>
 
-<b><font size="16">Clean and Prepare Data</font></b>
+<b>Clean and Prepare Data</b>
 <p>	The gzip data is loaded with the following functions. It takes a while to process, so, it is 
 	recommended to pickle the dataframes after loading.<br>
 
