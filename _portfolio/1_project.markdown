@@ -122,6 +122,7 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 	There are a few ways to do this. In this case, we will split a user's ratings into two. This 
 	means, if a user has rated 40 items, the train set would have 25, and the test, 15. The ratings
 	do not overlap, and both train and test sets are disjoint.<br>
+</p>
 
 {% highlight python %}
 
@@ -139,7 +140,6 @@ def train_test_split(ratings, size):
     return train, test
 
 {% endhighlight %}
-</p>
 
 <b><font size="+1">Matrix Factorization using ALS and SGD</font></b>
 <p>	For matrix factorization, we have two sets of latent vectors to solve, the user and the item. 

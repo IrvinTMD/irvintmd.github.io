@@ -1,28 +1,31 @@
 ---
 layout: post
 title:  a post with formatting and links
-date:   2015-03-15 16:40:16
-description: march & april, looking forward to summer
+date:   2017-08-28 21:40:15
+description: The First Day of DSI at General Assembly
 ---
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com" target="blank">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice" target="blank">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+It was a huge class. There were 24 of us, with 2 teaching assistants and 1 instructor. This is the instructor's third DSI batch, so, +1 for having an experienced instructor!  
 
-#### Hipster list
+<br>
+We did lots of setting up and installation:
 <ul>
-	<li>brunch</li>
-	<li>fixie</li>
-	<li>raybans</li>
-	<li>messenger bag</li>
+	<li>Anaconda</li>
+	<li>Python Packages</li>
+	<li>Git</li>
+	<li>PostGreSQL</li>
+	<li>Text Editors</li>
 </ul>
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan. 
-
-<hr>
-<br/>
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar. 
+It was quite a headache due to the size of the class. We did manage to get most sorted out though. 
+Regardless, we moved on to some Python Basics toward the end of the day. It was a breeze since I 
+had some prior experience with Python, through online courses like edX, Datacamp etc.
 
 <blockquote>
-	We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another. 
-	—Anais Nin
+	Intensive, intensive, intensive!
+	— Instructor
 </blockquote>
 
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+Throughout the day, that was pretty much the message that was constantly popping out. We were 
+continuously warned that the program will be highly fast-paced and intensive. Evenings and 
+weekends would be consumed by data. The next 12 weeks will be a data fest. And, we are to be 
+prepared for it!
