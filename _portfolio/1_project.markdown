@@ -176,7 +176,7 @@ def train_test_split(ratings, size):
 
 <br>
 <p> 
-	Now that we have our equations, let's proceed to the compuation.
+	Now that we have our equations, let's proceed to the computation.
 </p>
 
 {% highlight python %}
@@ -407,24 +407,4 @@ class MatFac():
 
 
 
-<div class="img_row">
-	<img class="col one" src="{{ site.baseurl }}/img/derivative.jpg" alt="" title="example image"/>
-	<img class="col one" src="{{ site.baseurl }}/img/derivative.jpg" alt="" title="example image"/>
-	<img class="col one" src="{{ site.baseurl }}/img/derivative.jpg" alt="" title="example image"/>
-</div>
-<div class="col three caption">
-	Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-
-
-
-
-<br/><br/><br/>
-
-
-The code is simple. Just add a col class to your image, and another class specifying the width: one, two, or three columns wide. Here's the code for the last row of images above: 
-
-	<div class="img_row">
-	  <img class="col two" src="/img/6.jpg"/>
-	  <img class="col one" src="/img/11.jpg"/>
-	</div>
+<hr>
