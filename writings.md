@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /testing/
-title: testing
+title: story
 description: Showcase your writing, short stories, or poems. Replace this text with your description.
 ---
 
