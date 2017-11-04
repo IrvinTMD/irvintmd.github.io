@@ -25,7 +25,7 @@ had some prior experience with Python, through online courses like edX, Datacamp
 	— Instructor
 </blockquote>
 
-Throughout the day, that was pretty much the message that was constantly popping out. We were 
+Throughout the day, that was pretty much the message that was constantly popping up. We were 
 continuously warned that the program will be highly fast-paced and intensive. Evenings and 
 weekends would be consumed by data. The next 12 weeks will be a data fest. And, we are to be 
 prepared for it!
