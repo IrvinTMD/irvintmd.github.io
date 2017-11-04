@@ -156,11 +156,30 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 	Item vector is constant, and this equation takes the derivative of the loss function with respect to 
 	the user vector.
 </div>
+
 <br>
 <p>
-	That was ALS. Now, let's move on with <b>Stochastic Gradient Descent</b> (SGD). 
+	That was ALS. Now, let's move on with <b>Stochastic Gradient Descent</b> (SGD). In SGD, we also take 
+	the derivative of the loss function, but now it is with respect to each variable in the model. The 
+	derivative is taken and feature weights are updated one individual sample at a time.<br>
+	In our SGD model, we will also include biases for each user and item, and a global bias. For example, 
+	some users might have a high average rating, or that certain items might have an average rating that 
+	is less than the global average. We would want to attempt to address this by adding biases.
 </p>
 
+<div>
+	<img src="{{ site.baseurl }}/img/bias_loss.jpg" alt="" title="Loss function with bias and regularization"/>
+</div>
+<div class="col three caption">
+	This is the equation for loss function, considering biases and regularization.
+</div>
+
+<br>
+<p>
+	
+
+	
+</p>
 
 
 
