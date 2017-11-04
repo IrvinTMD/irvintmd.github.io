@@ -150,7 +150,7 @@ def train_test_split(ratings, size):
 </p>
 
 <div>
-	<img src="{{ site.baseurl }}/img/derivative.jpg" alt="" title="Derivative"/>
+	<img class="col three" src="{{ site.baseurl }}/img/derivative.jpg" alt="" title="Derivative"/>
 </div>
 <div class="col three caption">
 	Item vector is constant, and this equation takes the derivative of the loss function with respect to 
