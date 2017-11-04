@@ -167,7 +167,7 @@ def train_test_split(ratings, size):
 	is less than the global average. We would want to attempt to address this by adding biases.
 </p>
 
-<div>
+<div class="img_row">
 	<img src="{{ site.baseurl }}/img/bias_loss.jpg" alt="" title="Loss function with bias and regularization"/>
 </div>
 <div class="col three caption">
