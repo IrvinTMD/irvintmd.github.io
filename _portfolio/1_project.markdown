@@ -123,22 +123,22 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 	means, if a user has rated 40 items, the train set would have 25, and the test, 15. The ratings
 	do not overlap, and both train and test sets are disjoint.<br>
 
-	{% highlight python %}
+{% highlight python %}
 
-	def train_test_split(ratings, size):
-    	test = np.zeros(ratings.shape)
-    	train = ratings.copy()
-    	for user in xrange(ratings.shape[0]):
-        	test_ratings = np.random.choice(ratings[user, :].nonzero()[0], 
+def train_test_split(ratings, size):
+    test = np.zeros(ratings.shape)
+    train = ratings.copy()
+    for user in xrange(ratings.shape[0]):
+        test_ratings = np.random.choice(ratings[user, :].nonzero()[0], 
                                         	size=size, replace=False)
-        	train[user, test_ratings] = 0.
-        	test[user, test_ratings] = ratings[user, test_ratings]
+        train[user, test_ratings] = 0.
+        test[user, test_ratings] = ratings[user, test_ratings]
         
-    	# Test and train are truly disjoint
-    	assert(np.all((train * test) == 0)) 
-    	return train, test
+    # Test and train are truly disjoint
+    assert(np.all((train * test) == 0)) 
+    return train, test
 
-	{% endhighlight %}
+{% endhighlight %}
 </p>
 
 <b><font size="+1">Matrix Factorization using ALS and SGD</font></b>
@@ -178,7 +178,7 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 <p>
 	
 
-	
+
 </p>
 
 
