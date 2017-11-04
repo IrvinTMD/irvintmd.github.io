@@ -149,7 +149,7 @@ def train_test_split(ratings, size):
 	vector (which was the previous constant). This is done repeatedly until convergence.
 </p>
 
-<div>
+<div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/derivative.jpg" alt="" title="Derivative"/>
 </div>
 <div class="col three caption">
