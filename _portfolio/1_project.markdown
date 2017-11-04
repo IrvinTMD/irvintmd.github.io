@@ -168,7 +168,7 @@ def train_test_split(ratings, size):
 </p>
 
 <div class="img_row">
-	<img src="{{ site.baseurl }}/img/bias_loss.jpg" alt="" title="Loss function with bias and regularization"/>
+	<img class="col three" src="{{ site.baseurl }}/img/bias_loss.jpg" alt="" title="Loss function with bias and regularization"/>
 </div>
 <div class="col three caption">
 	This is the equation for loss function, considering biases and regularization.
