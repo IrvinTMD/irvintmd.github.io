@@ -156,7 +156,7 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 	Item vector is constant, and this equation takes the derivative of the loss function with respect to 
 	the user vector.
 </div>
-
+<br>
 <p>
 	That was ALS. Now, let's move on with <b>Stochastic Gradient Descent</b> (SGD). 
 </p>
