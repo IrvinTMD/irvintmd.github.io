@@ -22,8 +22,8 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:path/
-  writings:
+  testing:
     output: true
-    permalink: /writings/:path/
+    permalink: /testing/:path/
 
 
