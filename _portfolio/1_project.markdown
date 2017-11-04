@@ -143,7 +143,7 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 
 <b><font size="+1">Matrix Factorization using ALS and SGD</font></b>
 <p>	For matrix factorization, we have two sets of latent vectors to solve, the user and the item. 
-	In Alternating Least Squares, we hold one set of latent vectors constant and we solve for the 
+	In <b>Alternating Least Squares</b>, we hold one set of latent vectors constant and we solve for the 
 	other non-constant vector. Now this is the alternating part. Once we have this solved vector, 
 	we now hold this newly solved vector constant, and then solve again for the new non-constant 
 	vector (which was the previous constant). This is done repeatedly until convergence.
@@ -158,7 +158,7 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 </div>
 
 <p>
-	Now that we have our 
+	That was ALS. Now, let's move on with <b>Stochastic Gradient Descent</b> (SGD). 
 </p>
 
 
