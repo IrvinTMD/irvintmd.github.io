@@ -149,8 +149,8 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 	vector (which was the previous constant). This is done repeatedly until convergence.
 </p>
 
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/derivative.jpg" alt="" title="Derivative"/>
+<div>
+	<img src="{{ site.baseurl }}/img/derivative.jpg" alt="" title="Derivative"/>
 </div>
 <div class="col three caption">
 	Item vector is constant, and this equation takes the derivative of the loss function with respect to 
