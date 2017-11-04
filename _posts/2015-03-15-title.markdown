@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  a post with formatting and links
+title:  Data Science Immersive Day One
 date:   2017-08-28 21:40:15
-description: The First Day of DSI at General Assembly
+description: How was the first day like?
 ---
 It was a huge class. There were 24 of us, with 2 teaching assistants and 1 instructor. This is the instructor's third DSI batch, so, +1 for having an experienced instructor!  
 
