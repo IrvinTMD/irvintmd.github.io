@@ -7,9 +7,12 @@ permalink: /about/
 <img class="col one right" src="/img/prof_pic.jpg">
 
 <br/>
-I am <a href="http://linkedin.com/in/irvintmd" target="blank">Irvin</a>. I am a data scientist.
-
-Python, Machine Learning, Deep Learning, TensorFlow, Recommender System, Anomaly Detection 
+I am <a href="http://linkedin.com/in/irvintmd" target="blank">Irvin</a>. I am a curious data 
+scientist who is embarking on a journey to make a mark. I aim to solve global issues in the 
+further future. My current interest lies in Anomaly Detection, Recommender Systems, and 
+Predictive Modelling. <br>
+<br>
+Python, Machine Learning, Deep Learning, TensorFlow, Recommender System, Anomaly Detection<br>
 
 SQL, PostGres, Hadoop, Spark, AWS, Google Cloud
 
