@@ -142,14 +142,20 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 </p>
 
 <b><font size="+1">Matrix Factorization using ALS and SGD</font></b>
-<p>	Alternating Least Squares (ALS) is where we hold one set of latent vectors constant, while 
-	solving for the other. 
-	
-
-
-
-
+<p>	For matrix factorization, we have two sets of latent vectors to solve, the user and the item. 
+	In Alternating Least Squares, we hold one set of latent vectors constant and we solve for the 
+	other non-constant vector. Now this is the alternating part. Once we have this solved vector, 
+	we now hold this newly solved vector constant, and then solve again for the new non-constant 
+	vector (which was the previous constant). This is done repeatedly until convergence.
 </p>
+
+div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/derivative.jpg" alt="" title="Derivative"/>
+</div>
+<div class="col three caption">
+	Item vector is constant, and this equation takes the derivative of the loss function with respect to 
+	the user vector.
+</div>
 
 <div class="img_row">
 	<img class="col one" src="{{ site.baseurl }}/img/1.jpg" alt="" title="example image"/>
@@ -163,7 +169,8 @@ Therefore, the entire project was pretty much a self-learning journey, from scra
 	<img class="col three" src="{{ site.baseurl }}/img/5.jpg" alt="" title="example image"/>
 </div>
 <div class="col three caption">
-	This image can also have a caption. It's like magic. 
+	Item vector is constant, and this equation takes the derivative of the loss function with respect to 
+	the user vector.
 </div>
 
 You can also put regular text between your rows of images. Say you wanted to write a little bit about your project before you posted the rest of the images. You describe how you toiled, sweated, *bled* for your project, and then.... you reveal it's glory in the next row of images.
