@@ -175,11 +175,233 @@ def train_test_split(ratings, size):
 </div>
 
 <br>
-<p> bababababaab
-	
-
-
+<p> 
+	Now that we have our equations, let's proceed to the compuation.
 </p>
+
+{% highlight python %}
+
+class MatFac():
+    def __init__(self, 
+                 ratings,
+                 n_factors=40,
+                 optimize='sgd',
+                 item_fact_reg=0.0, 
+                 user_fact_reg=0.0,
+                 item_bias_reg=0.0,
+                 user_bias_reg=0.0,
+                 verbose=False):
+        """
+        Matrix factorization model to predict empty entries in a matrix. 
+        Ratings matrix should be in the format: User x Item.
+        
+        Arguments
+        =========
+        ratings : (ndarray)
+            User x Item matrix with ratings
+        
+        n_factors : (int)
+            Number of latent factors to use in the model
+            
+        optimize : (str)
+            Method of optimization. Options include 
+            'sgd' or 'als'.
+        
+        item_fact_reg : (float)
+            Regularization term for item latent factors
+        
+        user_fact_reg : (float)
+            Regularization term for user latent factors
+            
+        item_bias_reg : (float)
+            Regularization term for item biases
+        
+        user_bias_reg : (float)
+            Regularization term for user biases
+        
+        verbose : (bool)
+            Whether or not to print out training progress
+        """
+        
+        self.ratings = ratings
+        self.n_users, self.n_items = ratings.shape
+        self.n_factors = n_factors
+        self.item_fact_reg = item_fact_reg
+        self.user_fact_reg = user_fact_reg
+        self.item_bias_reg = item_bias_reg
+        self.user_bias_reg = user_bias_reg
+        self.optimize = optimize
+        if self.optimize == 'sgd':
+            self.sample_row, self.sample_col = self.ratings.nonzero()
+            self.n_samples = len(self.sample_row)
+        self._v = verbose
+
+    def als_step(self,
+                 latent_vectors,
+                 fixed_vecs,
+                 ratings,
+                 _lambda,
+                 type='user'):
+        """
+        One of the two ALS steps. Solve for the latent vectors
+        specified by type.
+        """
+        if type == 'user':
+            YTY = fixed_vecs.T.dot(fixed_vecs)
+            lambdaI = np.eye(YTY.shape[0]) * _lambda
+
+            for u in xrange(latent_vectors.shape[0]):
+                latent_vectors[u, :] = solve((YTY + lambdaI), 
+                                             ratings[u, :].dot(fixed_vecs))
+        elif type == 'item':
+            XTX = fixed_vecs.T.dot(fixed_vecs)
+            lambdaI = np.eye(XTX.shape[0]) * _lambda
+            
+            for i in xrange(latent_vectors.shape[0]):
+                latent_vectors[i, :] = solve((XTX + lambdaI), 
+                                             ratings[:, i].T.dot(fixed_vecs))
+        return latent_vectors
+
+    def train(self, n_iter=10, learning_rate=0.1):
+        """ Train model for n_iter iterations from scratch."""
+        # initialize latent vectors        
+        self.user_vecs = np.random.normal(scale=1./self.n_factors,\
+                                          size=(self.n_users, self.n_factors))
+        self.item_vecs = np.random.normal(scale=1./self.n_factors,
+                                          size=(self.n_items, self.n_factors))
+        
+        if self.optimize == 'als':
+            self.mini_train(n_iter)
+        elif self.optimize == 'sgd':
+            self.learning_rate = learning_rate
+            self.user_bias = np.zeros(self.n_users)
+            self.item_bias = np.zeros(self.n_items)
+            self.global_bias = np.mean(self.ratings[np.where(self.ratings != 0)])
+            self.mini_train(n_iter)
+    
+    
+    def mini_train(self, n_iter):
+        """ 
+        Train model for n_iter iterations. Can be 
+        called multiple times for further training.
+        """
+        ctr = 1
+        while ctr <= n_iter:
+            if ctr % 10 == 0 and self._v:
+                print '\tcurrent iteration: {}'.format(ctr)
+            if self.optimize == 'als':
+                self.user_vecs = self.als_step(self.user_vecs, 
+                                               self.item_vecs, 
+                                               self.ratings, 
+                                               self.user_fact_reg, 
+                                               type='user')
+                self.item_vecs = self.als_step(self.item_vecs, 
+                                               self.user_vecs, 
+                                               self.ratings, 
+                                               self.item_fact_reg, 
+                                               type='item')
+            elif self.optimize == 'sgd':
+                self.training_indices = np.arange(self.n_samples)
+                np.random.shuffle(self.training_indices)
+                self.sgd()
+            ctr += 1
+
+    def sgd(self):
+        for idx in self.training_indices:
+            u = self.sample_row[idx]
+            i = self.sample_col[idx]
+            prediction = self.predict(u, i)
+            e = (self.ratings[u,i] - prediction) # error
+            
+            # Update biases
+            self.user_bias[u] += self.learning_rate * \
+                                (e - self.user_bias_reg * self.user_bias[u])
+            self.item_bias[i] += self.learning_rate * \
+                                (e - self.item_bias_reg * self.item_bias[i])
+            
+            # Update latent factors
+            self.user_vecs[u, :] += self.learning_rate * \
+                                    (e * self.item_vecs[i, :] - \
+                                     self.user_fact_reg * self.user_vecs[u,:])
+            self.item_vecs[i, :] += self.learning_rate * \
+                                    (e * self.user_vecs[u, :] - \
+                                     self.item_fact_reg * self.item_vecs[i,:])
+    def predict(self, u, i):
+        """ Predict rating for single user and item."""
+        if self.optimize == 'als':
+            return self.user_vecs[u, :].dot(self.item_vecs[i, :].T)
+        elif self.optimize == 'sgd':
+            prediction = self.global_bias + self.user_bias[u] + self.item_bias[i]
+            prediction += self.user_vecs[u, :].dot(self.item_vecs[i, :].T)
+            return prediction
+    
+    def predict_all(self):
+        """ Predict ratings for all user and item."""
+        predictions = np.zeros((self.user_vecs.shape[0], 
+                                self.item_vecs.shape[0]))
+        for u in xrange(self.user_vecs.shape[0]):
+            for i in xrange(self.item_vecs.shape[0]):
+                predictions[u, i] = self.predict(u, i)
+                
+        return predictions
+    
+    def calculate_learning_curve(self, iter_array, test, learning_rate=0.1):
+        """
+        Keep track of RMSE as a function of training iterations.
+        
+        Params
+        ======
+        iter_array : (list)
+            List of numbers of iterations to train for each step of 
+            the curve. e.g. [1, 5, 10, 20]
+        test : (2D ndarray)
+            Test dataset (user x item).
+        
+        The function creates two new class attributes:
+        
+        train_rmse : (list)
+            Training data RMSE values for each value of iter_array
+        test_rmse : (list)
+            Test data RMSE values for each value of iter_array
+        """
+        iter_array.sort()
+        self.train_rmse =[]
+        self.test_rmse = []
+        iter_diff = 0
+        for (i, n_iter) in enumerate(iter_array):
+            if self._v:
+                print 'Iteration: {}'.format(n_iter)
+            if i == 0:
+                self.train(n_iter - iter_diff, learning_rate)
+            else:
+                self.mini_train(n_iter - iter_diff)
+
+            predictions = self.predict_all()
+
+            self.train_rmse += [get_rmse(predictions, self.ratings)]
+            self.test_rmse += [get_rmse(predictions, test)]
+            if self._v:
+                print 'Train RMSE: ' + str(self.train_rmse[-1])
+                print 'Test RMSE: ' + str(self.test_rmse[-1])
+            iter_diff = n_iter
+
+{% endhighlight %}
+
+<br>
+<p>
+	We'll run this by choosing 50 latent vectors, learning rate 0.001, and without regularization. 
+	Let's see how this performs from the plot below.
+</p>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/sgd_plot.jpg" alt="" title="Learning curve for SGD Matrix Factorization"/>
+</div>
+<div class="col three caption">
+	That's a very decent RMSE score!
+</div>
+
+
+
 
 
 
