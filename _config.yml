@@ -22,8 +22,8 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:path/
-  story:
+  photography:
     output: true
-    permalink: /story/:path/
+    permalink: /photography/:path/
 
 
