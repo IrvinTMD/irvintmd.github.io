@@ -1,6 +1,6 @@
 ---
 layout: page
-title: portfolio
+title: data science
 permalink: /portfolio/
 ---
 
