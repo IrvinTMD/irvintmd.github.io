@@ -438,9 +438,14 @@ class MatFac():
 	<li>iterations: 200</li>
 </ul>
 
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/after_pred.jpg" alt="" title="Recommendations from our best model (sorted by highest predicted ratings)"/>
+</div>
+<div class="col three caption">
+	user1 is user with the most ratings, and user2 the least
+</div>
 
-
-
+<br>
 
 
 
