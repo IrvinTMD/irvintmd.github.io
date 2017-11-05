@@ -9,7 +9,7 @@ img: /img/credit_card.jpg
 <br/>
 
 <h4>Objective</h4>
-To come up with a prototype for a sedentary Pokemon Go.
+Detect Fraud on severely imbalanced dataset
 
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/loading.jpg" alt="" title="example image"/>
