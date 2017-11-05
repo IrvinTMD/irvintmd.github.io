@@ -438,19 +438,67 @@ class MatFac():
 	<li>iterations: 200</li>
 </ul>
 
+<br>
+It's time to run our model to generate predictions, and recommendations.<br>
+The first impression I had when I ran it was that I knew nothing about the recommended books. 
+I had no intuition at all, and had to look them up. Interestingly, they do belong to a similar 
+category. Most of them were Literature/Fiction, and Romance. Let's look at the recommendations 
+for two users; user1 has the most ratings, and user2, the least.<br>
+
+<h4>User1</h4>
 <div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/after_pred.jpg" alt="" title="Recommendations from our best model (sorted by highest predicted ratings)"/>
+	<img class="col three" src="{{ site.baseurl }}/img/user1.jpg" alt="" title="Recommendations VS User1's actual rated books"/>
 </div>
 <div class="col three caption">
-	user1 is user with the most ratings, and user2 the least
+	The first table shows our model's recommendations, and the second shows the user's rated books.
 </div>
 
 <br>
+The books here shown for User1 mostly fall under Romance/Women's books. We can also compare our model's 
+predicted score to the user's actual ratings in the second table as well.<br>
 
+<h4>User2</h4>
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/user2.jpg" alt="" title="Recommendations VS User2's actual rated books"/>
+</div>
+<div class="col three caption">
+	The first table shows our model's recommendations, and the second shows the user's rated books.
+</div>
 
+<br>
+Coincidentally, the books that user2 has rated belong to Romance as well. Our model's recommendations 
+did well here too, having mostly books in the Romance category.<br>
+<br>
+<p>
+	<b>Conclusion</b><br>
+	I performed Matrix Factorization by optimizing through Alternating Least Squares (ALS) and (SGD). 
+	The RMSE results were great. At 0.648, this means that all of our predictions are only 0.648 away 
+	from the actual ratings, on average. The model's predictions were intuitive as well.<br>
+	However, I believe that the 'Romance' recommendations were probably not a coincidence. If we 
+	recall from above, the ratings dataset was shrunk from 8 million reviews to a mere 100k because 
+	of limitations in time and resources. Therefore, in our data, every user and item would have at 
+	least 40 reviews each. This will likely 'converge' our data to a few major categories. Regardless, 
+	I remain confident in the model's ability to predict and recommend!<br>
+	<b>Moving On</b><br>
+	Immediate actions will probably be to substitute the dataset to the MovieLens 100k benchmark 
+	data to see how the model performs. Thereafter, I will have to explore AWS, Google Cloud 
+	so that I will be able to run the full 8 million reviews dataset and evaluate. This is too 
+	exciting to let go!
+	<b>Reflection</b><br>
+	This is by no means the end. I have learned a lot about python classes, matrix factorization, 
+	optimization, documentation, and more, through the implementation of this method. The process 
+	was certainly a tribulation, having to do everything from scratch and without support because 
+	the course doesn't cover this much, and my instructor was not very acquainted with RecSys. In 
+	addition, I came to realize that RecSys is in a world almost entirely different from traditional 
+	machine learning. It feels like a race to create better algorithms all the time. That said, my 
+	appetite for RecSys remains. Having read countless research papers, articles, updates on RecSys, 
+	my appetite continues to grow as I believe in its power to effect many changes. Although I am 
+	aware that I have just barely scraped the surface and there is still a long way to go, I am 
+	ready to take it on.<br>
+</p>
+<hr>
 
-
-
+<b><font size="+1">Restricted Boltzmann Machines with TensorFlow</font></b>
 
 
 
