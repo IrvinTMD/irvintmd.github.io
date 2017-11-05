@@ -2,7 +2,7 @@
 layout: post
 title: Game Programming and Analysis
 description: GA Project 01
-img: /img/pokemon.jpg
+img: /img/pokemons.jpg
 ---
 <h3>Pokemon Stay</h3>
 <br/>
