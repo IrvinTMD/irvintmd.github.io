@@ -1,0 +1,17 @@
+---
+layout: post
+title:  GO-JEK Studio Tour
+date: 2017-10-30 21:01:12
+description: Watching Data Science in Action
+---
+With much thanks to the Outcomes Producer at GA, we were able to view the office and studio of one of Indonesia's unicorns, Go Jek. Receiving us was Misrab, the VP of Data Science.<br>
+<br>
+It was an insightful session where we learnt a lot more about how data science functions in the industry. 
+I'd love to share more, but I need to complete some work now. I will update this again soon!
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/loading.jpg" alt="" title="example image"/>
+</div>
+<div class="col three caption">
+	GO-JEK Studio Tour
+</div>
