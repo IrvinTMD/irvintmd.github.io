@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /photography/
-title: Photography
+title: photography
 description: My photography journey
 ---
 
