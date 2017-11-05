@@ -400,6 +400,64 @@ class MatFac():
 	That's a very decent RMSE score!
 </div>
 
+<br>
+<p>
+	Now that the model is working well, let's try to take it a little further by finding the best 
+	hyperparameters. It's like a manual gridsearch in our case.
+	<ul>
+		<li>learning rate</li>
+		<li>latent factors</li>
+		<li>regularization (keeping it same for user and item)</li>
+	</ul>
+	<b>Warning</b> though, running these will take a long time since the code does not support 
+	parallel processing (n_jobs). I ran this on a 2014 MacBook Pro, 2.2 GHz i7 Quad Core, Memory 
+	16 GB, and it took about 4 hours. Be warned!<br>
+	Ultimately, this search only improved our result by 0.0003.
+</p>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/learning_rate.jpg" alt="" title="Searching for the best learning rate"/>
+</div>
+<div class="col three caption">
+	Looping through learning rates and saving the model with the best RMSE score.
+</div>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/fact_reg.jpg" alt="" title="Searching for the best latent factors and regularization hyperparameters"/>
+</div>
+<div class="col three caption">
+	Looping through latent factors and regularization parameters and saving the model with the best RMSE score.
+</div>
+
+<br>
+<b>Best hyperparameters: </b>
+<ul>
+	<li>learning rate: 0.001</li>
+	<li>latent factors: 50</li>
+	<li>regularization: 0.001</li>
+	<li>iterations: 200</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
