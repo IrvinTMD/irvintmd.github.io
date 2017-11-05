@@ -2,7 +2,7 @@
 layout: post
 title: Recommender System
 description: Capstone Project at GA
-img: /img/recsys.jpg
+img: /img/books.jpg
 ---
 November 17, 2017<br>
 This is my capstone project for the Data Science Immersive program at GA. The program is a 12-week 
