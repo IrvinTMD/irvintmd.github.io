@@ -479,11 +479,13 @@ did well here too, having mostly books in the Romance category.<br>
 	of limitations in time and resources. Therefore, in our data, every user and item would have at 
 	least 40 reviews each. This will likely 'converge' our data to a few major categories. Regardless, 
 	I remain confident in the model's ability to predict and recommend!<br>
+	<br>
 	<b>Moving On</b><br>
 	Immediate actions will probably be to substitute the dataset to the MovieLens 100k benchmark 
 	data to see how the model performs. Thereafter, I will have to explore AWS, Google Cloud 
 	so that I will be able to run the full 8 million reviews dataset and evaluate. This is too 
-	exciting to let go!
+	exciting to let go!<br>
+	<br>
 	<b>Reflection</b><br>
 	This is by no means the end. I have learned a lot about python classes, matrix factorization, 
 	optimization, documentation, and more, through the implementation of this method. The process 
