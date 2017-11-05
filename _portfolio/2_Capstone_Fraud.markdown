@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Capstone II
-description: Fraud Detection
+title: Fraud Detection
+description: Capstone Project II
 img: /img/credit_card.jpg
 ---
 
