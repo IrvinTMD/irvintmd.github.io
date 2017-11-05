@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Capstone II
+title:  Credit Card Fraud Detection
 date:   2017-11-05 23:19:51
-description: Credit Card Fraud Detection
+description: Capstone II
 ---
 Click <a href="https://irvintmd.github.io/portfolio/2_Capstone_Fraud/">here</a> to view the technical write-up for this project.<br>
 
