@@ -510,11 +510,31 @@ did well here too, having mostly books in the Romance category.<br>
 
 <b><font size="+1">Restricted Boltzmann Machine with TensorFlow</font></b>
 <p>
-	
-
-
+	Restricted Boltzmann Machines (RBM) are shallow neural networks that only consist of two layers. 
+	The 'restricted' means that neurons/nodes that are in the same layer, are not connected. 
+	RBM was invented in the 1980s, but it only rose to prominence after Geoffrey Hinton and 
+	collaborators invented fast learning algorithms for them in mid-2000s. RBM was also huge in 
+	the Netflix Prize which was an open competition in search for the best collaborative filtering 
+	algorithm to predict ratings. RBM was also said to be the seed that kickstarted Deep Learning. 
+	Some common applications for RBM include dimensionality reduction, feature extraction, feature 
+	learning, and collaborative filtering.<br>
+	<br>
+	<b>Let's take a closer look at RBM.</b> RBMs learn patterns and features in data by reconstructing 
+	the input. For instance, let's say the input (also known as the visible layer) is an image. The 
+	pixels are processed in the input, and the learning process consists of several forward and 
+	backward passes between the visible and hidden layer, where the RBM tries to reconstruct the 
+	data. The weights of the neural net are adjusted in such a way that the RBM can find the 
+	relationships among input features that are relevant. After training, the RBM will be able to 
+	reconstruct the input, which means that it tries to create an image similar to the input.<br>
+	<br>
 </p>
-
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/rbm_layers.jpg" alt="" title="RBM layers"/>
+</div>
+<div class="col three caption">
+	Each visible node is connected to every node in the hidden layer.
+</div>
+<br>
 
 
 
