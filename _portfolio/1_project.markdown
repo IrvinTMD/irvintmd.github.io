@@ -468,7 +468,6 @@ predicted score to the user's actual ratings in the second table as well.<br>
 <br>
 Coincidentally, the books that user2 has rated belong to Romance as well. Our model's recommendations 
 did well here too, having mostly books in the Romance category.<br>
-<br>
 <p>
 	<b>Conclusion</b><br>
 	I performed Matrix Factorization by optimizing through Alternating Least Squares (ALS) and (SGD). 
@@ -509,7 +508,7 @@ did well here too, having mostly books in the Romance category.<br>
 
 
 <hr>
-
+<br>
 <b><font size="+1">Restricted Boltzmann Machine with TensorFlow</font></b>
 <p>
 	Restricted Boltzmann Machines (RBM) are shallow neural networks that only consist of two layers. 
