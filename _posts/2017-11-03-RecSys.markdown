@@ -1,0 +1,15 @@
+---
+layout: post
+title:  Capstone Project
+date:   2017-11-04 14:40:21
+description: Recommender System
+---
+Click <a href="https://irvintmd.github.io/portfolio/1_Capstone_RS/">here</a> to view the technical write-up for this project.<br>
+<p>
+	After several gruelling weeks, the time has come to wrap up and produce a write-up for my capstone project at General Assembly.
+</p>
+<p>
+	For the project, I decided to take on the challenge of a Recommender System. .. ..
+
+
+</p>
