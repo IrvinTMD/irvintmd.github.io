@@ -536,9 +536,40 @@ did well here too, having mostly books in the Romance category.<br>
 	Each visible node is connected to every node in the hidden layer.
 </div>
 <br>
+As the image above shows, each hidden node receives input from all nodes from the visible layer 
+(4 in this case), multiplied by their respective weights. The result is then added to a bias (which 
+at least forces some activation to occur), followed by the activation algorithm, producing one output 
+for each node.<br>
 
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/rbm_recon.jpg" alt="" title="RBM Reconstruction"/>
+</div>
+<div class="col three caption">
+	Reconstruction, back propagation.
+</div>
+<p>
+	During the reconstruction phase, the activations of the hidden layer become the input in a 
+	backward pass. They are multiplied by the same weights, and are then added to another bias 
+	(the visible layer bias) and the output is considered a reconstruction. Therefore, the 
+	reconstruction error is the error between the reconstruction (r in the image) and the original 
+	input. The error is backpropagated against the weights in an iterative learning process until 
+	a minimum error is reached.
+</p>
+<b>Formatting data for RBM input</b><br>
+A dataframe cannot be fed into the RBM model in TensorFlow. We will have to turn it into a list 
+of lists. The list will have 1490 lists within, which represents each user. For each user's list, 
+there will be 1186 values, which corresponds to the number of items (books). The values are the 
+user's ratings, and it is a zero if the user did not rate the item.<br>
 
-
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/rbm_format.jpg" alt="" title="Code for formatting dataframe into list of lists for RBM input"/>
+</div>
+<div class="col three caption">
+	A loop to append rating values to a list
+</div>
+<br>
+First, we use pandas' groupby to group the dataframe by users. Then, we iterate and append rating 
+values to a temporary list, which then gets appended to the main list (trX).
 
 
 
