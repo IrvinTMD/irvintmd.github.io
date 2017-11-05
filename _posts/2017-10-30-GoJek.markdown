@@ -10,7 +10,7 @@ It was an insightful session where we learnt a lot more about how data science f
 I'd love to share more, but I need to complete some work now. I will update this again soon!
 
 <div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/loading.jpg" alt="" title="example image"/>
+	<img class="col three" src="{{ site.baseurl }}/img/gojek.jpg" alt="" title="example image"/>
 </div>
 <div class="col three caption">
 	GO-JEK Studio Tour
