@@ -499,11 +499,21 @@ did well here too, having mostly books in the Romance category.<br>
 <hr>
 
 <b><font size="+1">TensorFlow Matrix Factorization and Surprise Package</font></b>
+<p>
+	
+
+
+</p>
 
 
 <hr>
 
 <b><font size="+1">Restricted Boltzmann Machine with TensorFlow</font></b>
+<p>
+	
+
+
+</p>
 
 
 
