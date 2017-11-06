@@ -5,6 +5,9 @@ description: Capstone Project at GA
 img: /img/books.jpg
 ---
 November 17, 2017<br>
+<p>
+    For details and code, please visit my <a href="https://github.com/IrvinTMD/My-DSI-Projects/blob/master/Capstone/recsys_mf_rbm.ipynb"><b>Jupyter Notebook</b></a>.
+</p>
 This is my capstone project for the Data Science Immersive program at GA. The program is a 12-week 
 full-time course with five projects in total. It covers a very wide range of Data Science topics, 
 but unfortunately for me, Recommender Systems were only covered for about half a day, in week 11! 
