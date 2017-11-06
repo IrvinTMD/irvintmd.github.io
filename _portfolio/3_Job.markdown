@@ -4,7 +4,9 @@ title: Web Scraping Job Postings
 description: GA Project 04
 img: /img/jobcloud.jpg
 ---
-
+<p>
+    For details and code, please visit my <a href="https://github.com/IrvinTMD/My-DSI-Projects/blob/master/Project%20Four/project4.ipynb" target="_blank"><b>Jupyter Notebook</b></a>.
+</p>
 <h3>Analysis on Data Scientist jobs from Indeed</h3>
 <br/>
 
