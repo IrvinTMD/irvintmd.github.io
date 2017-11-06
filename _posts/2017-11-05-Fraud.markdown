@@ -10,7 +10,7 @@ Click <a href="https://irvintmd.github.io/portfolio/2_Capstone_Fraud/"><b>here</
 	Upon completion of my first capstone project on RecSys, I am excited to tackle the next problem which I find so deeply intriguing. Anomaly Detection is where we attempt to find/detect abnormal situations. It is exciting because it's akin to finding a needle in a haystack! Oftentimes, abnormal events are a minority, and this leaves us with an imbalanced dataset (e.g. 1% anomaly). In credit card fraud, this percentage might even be less than one percent.
 </p>
 <p>
-	Now, you probably have an intuition now why this skill would be valuable. Finding rare events/items has always been an interesting problem. It is valuable because it is rare. Anomalies can either be good, or bad events. Regardless, they still prove to be significant because, they are rare.
+	Now, you probably have an intuition why being able to detect anomalies would be a valuable skill. Finding rare events/items has always been an interesting problem. It is valuable because it is rare. Anomalies can either be good, or bad events. Regardless, they still prove to be significant because, they are rare.
 </p>
 <p>
 	In this project, I'll be making use of a rather popular dataset from Kaggle. It's a credit card fraud detection problem, with a fraud ratio of only <b>0.173%</b>! Let's see how I manage to solve this problem.
