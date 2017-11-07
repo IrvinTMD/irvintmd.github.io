@@ -572,7 +572,14 @@ user's ratings, and it is a zero if the user did not rate the item.<br>
 </div>
 <br>
 First, we use pandas' groupby to group the dataframe by users. Then, we iterate and append rating 
-values to a temporary list, which then gets appended to the main list (trX).
+values to a temporary list, which then gets appended to the main list (trX).<br>
+
+<div class="img_row">
+    <img class="col three" src="{{ site.baseurl }}/img/rbm1.jpg" alt="" title="Layers, Input, and Reconstruction"/>
+</div>
+<div class="col three caption">
+    Creating our layers, input, and reconstruction.
+</div>
 
 
 
