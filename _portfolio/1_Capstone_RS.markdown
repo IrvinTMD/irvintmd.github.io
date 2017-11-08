@@ -580,8 +580,11 @@ values to a temporary list, which then gets appended to the main list (trX).<br>
 <div class="col three caption">
     Creating our layers, input, and reconstruction.
 </div>
-
-
+<br>
+We begin by creating the layers, both visible and hidden. In the code, the biases are created first. The number of nodes in the hidden layer can be chosen and set, whereas the visible layer will have number of nodes equal to the number of unique items in our data. This is because each of our input data is a list of all ratings for all items of one user.<br>
+Next, we create the Weights layer which will be multiplied with the visible layer and fed into the hidden layer. That is why it has the shape with rows = number of visible nodes, and columns = number of hidden nodes.
+<br>
+The second box is where we create the layers, input and reconstruction. 
 
 
 
