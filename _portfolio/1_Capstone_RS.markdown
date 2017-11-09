@@ -593,11 +593,26 @@ The second box is where we create the layers, input and reconstruction. We use a
     Set parameters like learning rate, gradients for Contrastive Divergence, weights update, error function (reconstruction error) and variables.
 </div>
 <br>
-First, we set our equations for Contrastive Divergence to update the weights. A learning rate is also set.
+First, we set our equations for Contrastive Divergence to update the weights. A learning rate is also set. Next, the updating of Weights and Biases are carried out.<br>
+The error function is then defined. It is simple the mean squared error of the output minus the input. This gives us the reconstruction error which tells us how different the output is from the input. We are aiming to reduce this MSE as we want the machine to learn to reconstruct the input, and come up with weights and biases that allow for this. Lastly, we create the values for the placeholders. Finally, we run the model with the code below!<br>
 
+<div class="img_row">
+    <img class="col three" src="{{ site.baseurl }}/img/rbm3.jpg" alt="" title="Run the model."/>
+</div>
+<div class="col three caption">
+    Code to run the RBM model.
+</div>
+<br>
+The first and last lines of time.time() shows us how long the entire training took. Each epoch refers to a full training where the entire dataset is used. In this example, we will train the entire dataset 10 times. The 'update' equations are run to update the current weights and biases, and thereafter they will be assigned as 'previous', which will then be fed into the new epoch. We only specify to run the 'update' because everything that is linked (before) to the 'update' equation will also be run. These iterations continue to update the weights and biases while reducing the reconstruction error.<br>
 
-
-
+<div class="img_row">
+    <img class="col three" src="{{ site.baseurl }}/img/rbm3.jpg" alt="" title="Reconstruction Error Plot vs Epochs"/>
+</div>
+<div class="col three caption">
+    First 25 Epochs of the reconstruction error.
+</div>
+<br>
+The figure only shows the reconstruction error of the first 25 epochs. The error reduces rather quickly and slows down 0.09. Thereafter, the training ran and completed 200 epochs which further reduced the error to about 0.82 where it seemed to stagnate (view in Jupyter Notebook). I'll be attempting even more epochs to see what's the true minimum it can reach!
 
 
 
