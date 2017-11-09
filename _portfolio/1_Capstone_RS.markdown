@@ -606,7 +606,7 @@ The error function is then defined. It is simple the mean squared error of the o
 The first and last lines of time.time() shows us how long the entire training took. Each epoch refers to a full training where the entire dataset is used. In this example, we will train the entire dataset 10 times. The 'update' equations are run to update the current weights and biases, and thereafter they will be assigned as 'previous', which will then be fed into the new epoch. We only specify to run the 'update' because everything that is linked (before) to the 'update' equation will also be run. These iterations continue to update the weights and biases while reducing the reconstruction error.<br>
 
 <div class="img_row">
-    <img class="col three" src="{{ site.baseurl }}/img/rbm3.jpg" alt="" title="Reconstruction Error Plot vs Epochs"/>
+    <img class="col three" src="{{ site.baseurl }}/img/rbm4.jpg" alt="" title="Reconstruction Error Plot vs Epochs"/>
 </div>
 <div class="col three caption">
     First 25 Epochs of the reconstruction error.
