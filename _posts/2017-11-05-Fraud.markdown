@@ -4,7 +4,7 @@ title:  Credit Card Fraud Detection
 date:   2017-11-05 23:19:51
 description: Capstone II
 ---
-Click <a href="https://irvintmd.github.io/portfolio/2_Capstone_Fraud/"><b>here</b></a> to view the technical write-up for this project.<br>
+For a technical write-up for this project, please visit my <a href="https://irvintmd.github.io/portfolio/2_Capstone_Fraud/"><b>data science portfolio</b></a>.<br>
 
 <p>
 	Upon completion of my first capstone project on RecSys, I am excited to tackle the next problem which I find so deeply intriguing. Anomaly Detection is where we attempt to find/detect abnormal situations. It is exciting because it's akin to finding a needle in a haystack! Oftentimes, abnormal events are a minority, and this leaves us with an imbalanced dataset (e.g. 1% anomaly). In credit card fraud, this percentage might even be less than one percent.

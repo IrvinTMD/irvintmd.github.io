@@ -6,8 +6,8 @@ img: /img/credit_card.jpg
 ---
 November 17, 2017<br>
 <p>
-    For details and code, please visit my <a href=""><b>Jupyter Notebook</b></a>.<br>
-    Project is still in progress. First upload should be by Sunday, November 12.
+    For details and code, please visit my <a href="https://github.com/IrvinTMD/My-DSI-Projects/blob/master/Capstone%20II/fraud_detection.ipynb"><b>Jupyter Notebook</b></a>.<br>
+    Project is still in progress!
 </p>
 <h3>Credit Card Fraud Detection</h3>
 <br/>
