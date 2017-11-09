@@ -584,9 +584,16 @@ values to a temporary list, which then gets appended to the main list (trX).<br>
 We begin by creating the layers, both visible and hidden. In the code, the biases are created first. The number of nodes in the hidden layer can be chosen and set, whereas the visible layer will have number of nodes equal to the number of unique items in our data. This is because each of our input data is a list of all ratings for all items of one user.<br>
 Next, we create the Weights layer which will be multiplied with the visible layer and fed into the hidden layer. That is why it has the shape with rows = number of visible nodes, and columns = number of hidden nodes.
 <br>
-The second box is where we create the layers, input and reconstruction. 
+The second box is where we create the layers, input and reconstruction. We use a sigmoid activation function because we have formatted the input to be continuous between 0 and 1. Next, we use tf.sign on the hidden layer and have a ReLU function act on it. The reconstruction phase is just a reverse of the above.<br>
 
-
+<div class="img_row">
+    <img class="col three" src="{{ site.baseurl }}/img/rbm2.jpg" alt="" title="Parameters, error/cost function, variable initialization"/>
+</div>
+<div class="col three caption">
+    Set parameters like learning rate, gradients for Contrastive Divergence, weights update, error function (reconstruction error) and variables.
+</div>
+<br>
+First, we set our equations for Contrastive Divergence to update the weights. A learning rate is also set.
 
 
 
