@@ -614,6 +614,7 @@ The first and last lines of time.time() shows us how long the entire training to
 <br>
 The figure only shows the reconstruction error of the first 25 epochs. The error reduces rather quickly and slows down 0.09. Thereafter, the training ran and completed 200 epochs which further reduced the error to about 0.82 where it seemed to stagnate (view in Jupyter Notebook). I'll be attempting even more epochs to see what's the true minimum it can reach!
 
+fajksfasgfashfashdhasda
 
 
 
