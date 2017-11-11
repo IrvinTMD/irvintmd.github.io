@@ -26,7 +26,7 @@ SQL, PostGres, Hadoop, Spark, AWS, Google Cloud
 	<a href="mailto:irvin_e@hotmail.com"><i class="fa fa-envelope-square"></i></a>
 	<a href="https://github.com/irvintmd" target="_blank"><i class="fa fa-github-square"></i></a>
 	<a href="https://www.linkedin.com/in/irvintmd" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-	<a href="https://www.kaggle.com/irvintmd" target="_blank"><i class="fa fa-meh-o"></i></a>
+	<span title="Kaggle"><a href="https://www.kaggle.com/irvintmd" target="_blank"><i class="fa fa-meh-o"></i></a></span>
 	<!-- <a href="http://tumblr.com" target="_blank"><i class="fa fa-tumblr-square"></i></a>
 	<a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square"></i></a> -->
 </span>
