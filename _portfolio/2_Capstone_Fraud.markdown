@@ -21,3 +21,13 @@ Detect Fraud on severely imbalanced dataset
 <div class="col three caption">
 	Content is being prepared. Coming soon.
 </div>
+<hr>
+<b><font size="+1">Objective</font></b>
+<p>	
+</p>
+
+<b><font size="+1">Data</font></b>
+<p>	This is a popular dataset from <a href="https://www.kaggle.com/dalpozz/creditcardfraud">Kaggle</a>.
+	Out of 284,807 data rows, only 492 are fraudulent transactions. That's extremely imbalanced at 0.173%!<br>
+
+</p>
