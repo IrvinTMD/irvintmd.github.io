@@ -91,7 +91,9 @@ Finally, we get to our Class labels. A simple bar plot was created, and the perc
 <b>What an imbalanced dataset!</b> Out of over 280,000 rows, only 492 are fraudulent transactions. That equates to about 0.173%. Isn't that akin to finding a needle in a haystack?<br>
 <br>
 <b>What does this mean?</b> Having a ratio like this, we must know that we cannot make use of conventional/traditional accuracy measures as our performance metric. In fact, even our approach to sampling and modelling will be very different.<br>
+<br>
 Simple accuracy scores are not feasible because even a dumb machine, which predicts non-fraud all the time, will get our baseline accuracy score of 100.0 - 0.173 = 99.827%! This might appear awesome as an article headline (thus, please remember to always be critical when reading/evaluating articles), but it is far from the truth. It does not help at all in understanding how our model performs in detecting fraud cases.<br>
+<br>
 What do we do then? We make use of <b>precision</b> and <b>recall</b> scores to help us evaluate our models. Recall (rate of False Negative) refers to how many actual frauds we are able to detect. Whereas, Precision (False Positive) refers to how many of our machine's predicted fraud cases are real, actual frauds. Ideally, we want to get high scores for both of them. However, reality is hardly kind. In this case of Credit Card Fraud, recall scores are more crucial. If a transaction is fraudulent and we predict it as normal, the consequence is much greater than if we predict a normal case as fraud. Therefore, our main focus will be on recall scores, but of course, we will also optimize the precision score, and allow our models to 'tune' between placing emphasis on either. Flexibility!
 
 
