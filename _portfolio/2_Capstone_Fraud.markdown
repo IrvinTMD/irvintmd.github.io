@@ -45,9 +45,11 @@ Detect Fraud on severely imbalanced dataset
 		<li>Exploratory Data Analysis</li>
 		<li>Manual Under-Sampling modelled with Logistic Regression</li>
 		<li>Sampling methods with IMBLearn package</li>
-			<li>Logistic Regression</li>
-			<li>Random Forests</li>
-			<li>XGBoost</li>
+			<ul>
+				<li>Logistic Regression</li>
+				<li>Random Forests</li>
+				<li>XGBoost</li>
+			</ul>
 		<li>Ensemble Sampling</li>
 		<li>Autoencoder Neural Net</li>
 		<li>Cost Sensitive Learning</li>
