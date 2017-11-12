@@ -66,7 +66,7 @@ Detect Fraud on severely imbalanced dataset
 <div class="col three caption">
 	Heatmap to visualize correlations between features.
 </div>
-
+<br>
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/fd_time_amount.jpg" alt="" title="Time VS Amount Plot"/>
 </div>
@@ -108,7 +108,7 @@ What do we do then? We make use of <b>precision</b> and <b>recall</b> scores to 
 <div class="col three caption">
 	A simple manual undersampling.
 </div>
-
+<br>
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/fd_size.jpg" alt="" title="Train Test Size and Ratio"/>
 </div>
@@ -134,21 +134,21 @@ What do we do then? We make use of <b>precision</b> and <b>recall</b> scores to 
 <div class="col three caption">
 	Prints classification report, plots ROC curve if specified, and returns confusion matrix.
 </div>
-
+<br>
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/lr_under_test.jpg" alt="" title="Predict on undersampled test set"/>
 </div>
 <div class="col three caption">
 	Prediction on undersampled test set, with model trained on undersampled train set.
 </div>
-
+<br>
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/lr_whole_test.jpg" alt="" title="Predict on whole data set"/>
 </div>
 <div class="col three caption">
 	Prediction on whole data test set, with model trained on undersampled train set.
 </div>
-
+<br>
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/lr_whole_traintest.jpg" alt="" title="Function for our performance metrics"/>
 </div>
