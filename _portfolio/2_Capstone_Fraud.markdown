@@ -156,8 +156,21 @@ What do we do then? We make use of <b>precision</b> and <b>recall</b> scores to 
 	Prediction on whole data test set, with model trained on whole data train set.
 </div>
 <br>
-The model performed 
+It comes without surprise that the model performs well on its own undersampled test set. However, it feels quite impressive that it managed to achieve a pretty high recall score of 0.91 on the whole dataset! Granted, the precision score leaves quite a lot to be desired, but, we must remember that this is merely a Logistic Regression model on 984 data points (undersampled). I'd say it did really well for its simplicity. Of course, we would not be stopping here. Regardless, this result is aligned with the direction we're headed; a heavier focus on recall.<br>
+<br>
+For the last model, we trained the entire data set and predicted. As expected, the scores are not good, as the training set is in itself imbalanced at 0.173%. We are missing out at least 40% of all fraudulent transactions here. That's a significant impact in the real world. This model was done just for constrastive purposes to illustrate the importance of sampling techniques on imbalanced datasets. Even a simple small scale undersampling gave us a much higher recall score.<br>
+<br>
 
+<b><font size="+1">More Modelling with IMBLearn Sampling Techniques</font></b>
+<p>
+	
+
+
+
+
+
+	
+</p>
 
 
 
