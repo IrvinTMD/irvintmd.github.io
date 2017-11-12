@@ -94,7 +94,72 @@ Finally, we get to our Class labels. A simple bar plot was created, and the perc
 <br>
 Simple accuracy scores are not feasible because even a dumb machine, which predicts non-fraud all the time, will get our baseline accuracy score of 100.0 - 0.173 = 99.827%! This might appear awesome as an article headline (thus, please remember to always be critical when reading/evaluating articles), but it is far from the truth. It does not help at all in understanding how our model performs in detecting fraud cases.<br>
 <br>
-What do we do then? We make use of <b>precision</b> and <b>recall</b> scores to help us evaluate our models. Recall (rate of False Negative) refers to how many actual frauds we are able to detect. Whereas, Precision (False Positive) refers to how many of our machine's predicted fraud cases are real, actual frauds. Ideally, we want to get high scores for both of them. However, reality is hardly kind. In this case of Credit Card Fraud, recall scores are more crucial. If a transaction is fraudulent and we predict it as normal, the consequence is much greater than if we predict a normal case as fraud. Therefore, our main focus will be on recall scores, but of course, we will also optimize the precision score, and allow our models to 'tune' between placing emphasis on either. Flexibility!
+What do we do then? We make use of <b>precision</b> and <b>recall</b> scores to help us evaluate our models. Recall (rate of False Negative) refers to how many actual frauds we are able to detect. Whereas, Precision (False Positive) refers to how many of our machine's predicted fraud cases are real, actual frauds. Ideally, we want to get high scores for both of them. However, reality is hardly kind. In this case of Credit Card Fraud, recall scores are more crucial. If a transaction is fraudulent and we predict it as normal, the consequence is much greater than if we predict a normal case as fraud. Therefore, our main focus will be on recall scores, but of course, we will also optimize the precision score, and allow our models to 'tune' between placing emphasis on either. Flexibility!<br>
+<br>
+
+<b><font size="+1">Manual Undersampling</font></b>
+<p>
+	We'll try a simple manual undersampling of the over-represented class first, by randomly selecting 492 rows out. We would now have 492 fraud and 492 normal transactions. We then prepare both of our datasets (whole data and undersampled data) by splitting them into train and test sets for further usage. A basic Logistic Regression is used to model on the undersampled data.
+</p>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/fd_undersample.jpg" alt="" title="Undersampling Code"/>
+</div>
+<div class="col three caption">
+	A simple manual undersampling.
+</div>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/fd_size.jpg" alt="" title="Train Test Size and Ratio"/>
+</div>
+<div class="col three caption">
+	The sizes and ratios of train-test-splits on both dataset versions
+</div>
+<br>
+
+<b><font size="+1">Logistic Regression on Under-Sampled Data</font></b>
+<p>
+	A gridsearch was performed to obtain the best hyperparameters for the model. We will be predicting on 3 sets of data.
+	<ul>
+		<li>Undersampled Test Set</li>
+		<li>Whole Data Test Set</li>
+		<li>Lastly, we try to train on the whole data, and predict to see how it goes!</li>
+	</ul>
+	Before we continue, we will build a function to return scores for us. Our function will print out sklearn's classification report (shows precision, recall, f1 score, support), plot a ROC curve if specified, and returns a confusion matrix in dataframe format.
+</p>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/fd_resfunc.jpg" alt="" title="Function for our performance metrics"/>
+</div>
+<div class="col three caption">
+	Prints classification report, plots ROC curve if specified, and returns confusion matrix.
+</div>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/lr_under_test.jpg" alt="" title="Predict on undersampled test set"/>
+</div>
+<div class="col three caption">
+	Prediction on undersampled test set, with model trained on undersampled train set.
+</div>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/lr_whole_test.jpg" alt="" title="Predict on whole data set"/>
+</div>
+<div class="col three caption">
+	Prediction on whole data test set, with model trained on undersampled train set.
+</div>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/lr_whole_traintest.jpg" alt="" title="Function for our performance metrics"/>
+</div>
+<div class="col three caption">
+	Prediction on whole data test set, with model trained on whole data train set.
+</div>
+
+
+
+
+
 
 
 
