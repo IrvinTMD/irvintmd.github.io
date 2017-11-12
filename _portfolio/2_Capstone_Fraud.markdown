@@ -12,16 +12,6 @@ November 17, 2017<br>
 <h3>Credit Card Fraud Detection</h3>
 <br/>
 
-<h4>Objective</h4>
-Detect Fraud on severely imbalanced dataset
-
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/loading.jpg" alt="" title="example image"/>
-</div>
-<div class="col three caption">
-	Content is being prepared. Coming soon.
-</div>
-<hr>
 <b><font size="+1">Objective</font></b>
 <p>	
 	The aim of this project is to experiment different approaches to dealing with fraud detection and to understand the pros and cons of each. Recall score is our priority because the consequences are more dire if we misclassify a true fraud case as non-fraud. Precision score is important as well, but its impact is less serious than recall score in terms of credit card fraud. Choosing or balancing between both of these scores will depend on the context of the problem; e.g. real world business needs (whether or not we require a maximum score for either metric, or a balance of both).
@@ -163,15 +153,50 @@ For the last model, we trained the entire data set and predicted. As expected, t
 
 <b><font size="+1">More Modelling with IMBLearn Sampling Techniques</font></b>
 <p>
-	
-
-
-
-
-
-	
+	IMBLearn (short for imbalanced-learn) is a python package offering a number of <b>re-sampling techniques</b> commonly used in datasets showing strong between-class imbalance. It is compatible with scikit-learn and is part of scikit-learn-contrib projects. For more information, please visit the <a href="http://contrib.scikit-learn.org/imbalanced-learn/stable/index.html">documentation</a>.<br>
+	<br>
+	The first technique we will try is the popular <b>SMOTE</b>, which means Synthetic Minority Over Sampling Technique. SMOTE has proven effectiveness over lots of applications, and several papers/articles have had success with it. What SMOTE does is that it constructs synthetic samples from the under-represented class by making use of nearest neighbours. It is sort of a bootstrapping method. Therefore, in our case, the train set has about 213,000 rows. SMOTE will use the 492 fraud data points as reference to create synthetic samples up to the number of rows of the over-represented class, which is ~213,000 (to get 50/50 ratio).
 </p>
 
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/smote_example.jpg" alt="" title="SMOTE"/>
+</div>
+<div class="col three caption">
+	Example code to SMOTE.
+</div>
+<br>
+After SMOTE'ing, we perform the usual gridsearch to find hyperparameters for the subsequent Logistic Regression model. We always start modelling with Logistic Regression because it is the simplest model and can serve as a baseline for us to understand how the dataset fares. In addition, if Logistic Regression happens to be sufficient in giving us good scores, we could just stick with it! Simplicity is beauty.<br>
+<br>
+This time, due to having much more rows (over 400,000), the gridsearch process had to take about 30 minutes to complete. The results were 'underwhelming' though. It seemed like the value of C does not really change the score, which hangs around 0.94 all the time. We must be reminded though, that the score reflected through gridsearch is not precision or recall but a simple accuracy measure. Thus, it may not be reliable after all in our case. In fact, I had to manually run an empirical analysis to determine a decent C value, which was also 'underwhelming' because they do not have significant differences. As a result, I decided on a smaller C value for computation speed.<br>
+<br>
+Hereon, we will make use of <b>pipelines</b> for cleaner code and ease of operations as we would be running many models. It is important to note that IMBLearn's pipeline is different from that of sklearn's. The latter is unable to accept the former's sampling technique as part of its pipeline. Thus, please make sure you are importing and using IMBLearn's pipeline.<br>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/smote_lr.jpg" alt="" title="SMOTE Logistic Regression"/>
+</div>
+<div class="col three caption">
+	SMOTE Logistic Regression after gridsearching.
+</div>
+<br>
+Recall score seemed to maintain (in comparison to our 'benchmark' undersampling LR earlier), but a slight improvement was observed in precision. Unfortunately, that is not our main goal at this point. Let's move on to try other sampling techniques. The next will be <b>Edited Nearest Neighbours</b> (ENN undersampling).<br>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/enn_lr.jpg" alt="" title="ENN Logistic Regression"/>
+</div>
+<div class="col three caption">
+	ENN Logistic Regression results.
+</div>
+<br>
+Wow! This is the first time we're seeing double digits for both our FP and FN. The recall score is not as high as before, but the precision score flew up to about 80%; very close to our recall. While these scores might seem very balanced and fairly high, we should not be satisfied because our goal is to maximize recall. Here, we are still missing out on ~20% of frauds. Now, how about we combine SMOTE and ENN? It's <b>SMOTEENN</b> time.<br>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/smoteenn_lr.jpg" alt="" title="SMOTEENN Logistic Regression"/>
+</div>
+<div class="col three caption">
+	SMOTEENN Logistic Regression results.
+</div>
+<br>
+Well, a combination of both did not give us much difference in results.
 
 
 
@@ -183,6 +208,11 @@ For the last model, we trained the entire data set and predicted. As expected, t
 
 
 
-
-
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/loading.jpg" alt="" title="example image"/>
+</div>
+<div class="col three caption">
+	More content is being prepared. Check back soon.
+</div>
+<hr>
 
