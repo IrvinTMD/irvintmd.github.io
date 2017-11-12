@@ -48,8 +48,7 @@ Detect Fraud on severely imbalanced dataset
 			<ul>
 				<li>Logistic Regression</li>
 				<li>Random Forests</li>
-				<li>XGBoost</li>
-			</ul>
+				<li>XGBoost</li></ul>
 		<li>Ensemble Sampling</li>
 		<li>Autoencoder Neural Net</li>
 		<li>Cost Sensitive Learning</li>
