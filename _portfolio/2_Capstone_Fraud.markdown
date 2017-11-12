@@ -37,3 +37,29 @@ Detect Fraud on severely imbalanced dataset
 	'Amount' is the transaction Amount, this feature can be used for example-dependent cost-senstive learning.<br>
 	'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 </p>
+
+<b><font size="+1">Overview</font></b>
+<p>	
+	The data has PCA features V1 ~ V28, Time, Amount, and Class. For our initial analyses, we will be putting aside the Time and Amount and focus on testing models on just the 28 features.
+	<ul>
+		<li>Exploratory Data Analysis</li>
+		<li>Manual Under-Sampling modelled with Logistic Regression</li>
+		<li>Sampling methods with IMBLearn package</li>
+			<li>Logistic Regression</li>
+			<li>Random Forests</li>
+			<li>XGBoost</li>
+		<li>Ensemble Sampling</li>
+		<li>Autoencoder Neural Net</li>
+		<li>Cost Sensitive Learning</li>
+	</ul>
+</p>
+
+
+
+
+
+
+
+
+
+
