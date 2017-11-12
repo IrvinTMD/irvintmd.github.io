@@ -155,8 +155,8 @@ What do we do then? We make use of <b>precision</b> and <b>recall</b> scores to 
 <div class="col three caption">
 	Prediction on whole data test set, with model trained on whole data train set.
 </div>
-
-
+<br>
+The model performed 
 
 
 
