@@ -249,11 +249,39 @@ The function takes in the .predict_proba() values, the true y values, and a user
 
 <b><font size="+1">eXtreme Gradient Boosting XGBoost</font></b>
 <p>
-	
+	We have come to the powerhouse. Please visit <a href="https://xgboost.readthedocs.io/en/latest/">XGBoost</a> documentation for more information! As before, we will be sampling with imblearn.<br>
+</p>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/xgb_smote.jpg" alt="" title="XGBoost with SMOTE"/>
+</div>
+<div class="col three caption">
+	XGBoost with SMOTE
+</div>
+<p>
+Still, there does not seem to be a significant improvement in the scores. Note that we have not performed extensive parameter tuning yet.<br>
+<br>
+So far, we have tried Logistic Regression, Random Forest, and XGBoost together with a handful of sampling techniques. Our best score was 98% recall and 12% precision which was achieved through a two-model ensemble of Random Forest (trained on whole data and undersampled data). It's time to reach deeper into <b>ensembling</b>.<br>
+</p>
+
+<b><font size="+1">Ensembling Sampling</font></b>
+<p>
+	Essentially, this is just re-sampling of the undersampled dataset. Our first sampling technique above was a manual under-sampling of 492 data points from the over-represented class. This gave us a dataset of 984 points, with a 50/50 ratio of fraud/normal, where all the fraud data points are included.<br>
+	<br>
+	Now, we want to train more models in order to ensemble them, which is, to merge their results and get a 'majority vote'. It is like listening to several experts and aggregating their wisdom. With this kind of 'community voting', we hope something better will emerge.<br>
+	<br>
+	<b>How does this happen?</b> Similar to before, we randomly select 492 rows from the over-represented class, join it with our 492 fraud cases, and here we have one dataset for training. We repeat this process for k number of times. Each time, we will be getting different sets of 492 normal transactions. Therefore, we will have k number of datasets and each of them will be modelled separately. We then take each individual model's prediction, ensemble them, and acquire new predictions! For example, we can do this 10 times for Logistic Regression, 10 times for Random Forests, and 10 times for XGBoost, then ensemble them. The possibilities are endless.<br>
+	<br>
+	<b>How can we build on that?</b> We can even refine this further by altering the class ratio within each dataset. Currently, all k of our datasets have a 50/50 class ratio. We can tune that by having some datasets to contain 25/75, 40/60 etc. class ratio. This allows for
 
 
 
-	
+
+
+
+
+
+
 </p>
 
 
