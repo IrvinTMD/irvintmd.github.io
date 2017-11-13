@@ -196,8 +196,38 @@ Wow! This is the first time we're seeing double digits for both our FP and FN. T
 	SMOTEENN Logistic Regression results.
 </div>
 <br>
-Well, a combination of both did not give us much difference in results.
+Well, a combination of both did not give us much difference in results. Let's a take a step further and adjust the <b>probability thresholds</b> to see if it is possible to balance FP and FN. By using .predict_proba(), the probability values for a data point to be Class 0 or 1 are provided. We can turn it into a dataframe, and add a new column for our manual prediction that is based on adjusting the threshold. For example, if data point 100 has a probability of 0.65 to be Class 1, the default threshold of 0.5 will classify this point as 1. If we adjust the threshold to be 0.7 (which is higher than the probability value), the data point will be classified as 0 since it is below 0.7. <br>
 
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/adjusth_manual.jpg" alt="" title="Manual Threshold Adjustment"/>
+</div>
+<div class="col three caption">
+	To achieve 100% recall, the threshold had to be 0.0001!
+</div>
+<br>
+Through empirical testing, we found that the threshold (for our SMOTE model) had to be 0.0001 in order to achieve 100% recall. However, it came at a severe cost on precision. Given these values, the machine might as well predict every point as fraud! Moving on, we will be adjusting thresholds often, so, we built a function for it.<br>
+
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/adjusth_func.jpg" alt="" title="Threshold Adjustment function"/>
+</div>
+<div class="col three caption">
+	A function to return results upon probability threshold adjustment
+</div>
+<br>
+The function takes in the .predict_proba() values, the true y values, and a user-specified threshold value. It prints out the confusion matrix and returns the adjusted prediction values of 0 and 1.<br>
+<br>
+
+<b><font size="+1">Random Forests</font></b>
+<p>
+	
+	
+
+
+
+
+
+
+</p>
 
 
 
