@@ -236,12 +236,13 @@ The function takes in the .predict_proba() values, the true y values, and a user
 		Our undersampled data seems to always perform well in recall scores.
 	</div>
 	<br>
-	
-
-
-
-
-
+	Let's see if we can get a better score by merging these two models together; ensembling. Both model's predicted probabilities are added together and averaged. Then, the threshold is adjusted to see how the model does in terms of precision vs recall.<br>
+	<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/rf_ensemble.jpg" alt="" title="Ensembling two RF models"/>
+	</div>
+	<div class="col three caption">
+		Two Random Forest models (one trained on whole data, another on undersampled) are ensembled to generate new predictions.
+	</div>
 </p>
 
 
