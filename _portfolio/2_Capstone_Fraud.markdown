@@ -227,8 +227,16 @@ The function takes in the .predict_proba() values, the true y values, and a user
 		Random Forest SMOTE sampling.
 	</div>
 	<br>
-	We get slightly better recall and precision scores at least ~0.80 each. However, the same problem remains. The results do not match our goal in minimizing recall scores and the False Negatives.
+	We get slightly better recall and precision scores at least ~0.80 each. However, the same problem remains. The results do not match our goal in minimizing recall scores and False Negatives. Next, we try to train a RF on our manually undersampled data.<br>
 
+	<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/rf_under.jpg" alt="" title="Random Forest on Undersampled data"/>
+	</div>
+	<div class="col three caption">
+		Our undersampled data seems to always perform well in recall scores.
+	</div>
+	<br>
+	
 
 
 
