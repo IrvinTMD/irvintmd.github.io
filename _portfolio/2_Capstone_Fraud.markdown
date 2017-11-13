@@ -219,8 +219,15 @@ The function takes in the .predict_proba() values, the true y values, and a user
 
 <b><font size="+1">Random Forests</font></b>
 <p>
-	
-	
+	I tried to run a gridsearch which took hours overnight and crashed the kernel. Thereafter, I manually tested several parameters and found these to produce better results.<br>
+	<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/rf_smote.jpg" alt="" title="Random Forest SMOTE"/>
+	</div>
+	<div class="col three caption">
+		Random Forest SMOTE sampling.
+	</div>
+	<br>
+	We get slightly better recall and precision scores at least ~0.80 each. However, the same problem remains. The results do not match our goal in minimizing recall scores and the False Negatives.
 
 
 
