@@ -243,6 +243,17 @@ The function takes in the .predict_proba() values, the true y values, and a user
 	<div class="col three caption">
 		Two Random Forest models (one trained on whole data, another on undersampled) are ensembled to generate new predictions.
 	</div>
+	<br>
+	An <b>ensemble</b> of both models did give us an improvement! The recall score remained from the undersampled model (2 FN), and the precision was improved quite significantly to 0.12, at 883 False Positives. This looks promising. We will attempt even more ensembling later to boost our scores.
+</p>
+
+<b><font size="+1">eXtreme Gradient Boosting XGBoost</font></b>
+<p>
+	
+
+
+
+	
 </p>
 
 
