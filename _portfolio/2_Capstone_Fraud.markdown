@@ -272,7 +272,7 @@ So far, we have tried Logistic Regression, Random Forest, and XGBoost together w
 	<br>
 	<b>How does this happen?</b> Similar to before, we randomly select 492 rows from the over-represented class, join it with our 492 fraud cases, and here we have one dataset for training. We repeat this process for k number of times. Each time, we will be getting different sets of 492 normal transactions. Therefore, we will have k number of datasets and each of them will be modelled separately. We then take each individual model's prediction, ensemble them, and acquire new predictions! For example, we can do this 10 times for Logistic Regression, 10 times for Random Forests, and 10 times for XGBoost, then ensemble them. The possibilities are endless.<br>
 	<br>
-	<b>How can we build on that?</b> We can even refine this further by altering the class ratio within each dataset. Currently, all k of our datasets have a 50/50 class ratio. We can tune that by having some datasets to contain 25/75, 40/60 etc. class ratio. This allows for
+	<b>How can we build on that?</b> We can even refine this further by altering the class ratio within each dataset. Currently, all k of our datasets have a 50/50 class ratio. We can tune that by having some datasets to contain 25/75, 40/60 etc. class ratio. This ..
 
 
 
