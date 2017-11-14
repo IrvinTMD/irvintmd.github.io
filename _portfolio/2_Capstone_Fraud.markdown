@@ -295,6 +295,30 @@ So far, we have tried Logistic Regression, Random Forest, and XGBoost together w
 	Gradual improvement! Our first ensemble model did better than its single counterpart by a reduction of about 900 False Positives and gave a precision score of about 0.09. Recall score did not change though. After ensembling, the precision score increased slightly. Things are looking good. Random Forest and XGBoost should perform much better than this.<br>
 	<br>
 	<b>Random Forest Ensemble Sampling</b>
+	Our Forest hyperparameters were obtained through empirical testing and gridsearch. The class weight was set to 0.1 for the normal class (0) as we want the model to place more weights on our fraud cases (1). We don't want to miss out any fraud cases.<br>
+
+	<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/ensem_rf_ratio.jpg" alt="" title="Ensemble Sampling + Ratio Adjustment with Random Forest"/>
+	</div>
+	<div class="col three caption">
+		Ensemble Sampling + Ratio Adjustment with Random Forest.
+	</div>
+	We have a breakthrough again! That's a big improvement on the precision score while maintaining a 100% recall score. Let's see if we can further decrease the amount of False Positives we get. Moving on to XGBoost..
+</p>
+
+<b>XGBoost Ensemble Sampling</b>
+<p>
+	
+
+
+
+
+
+
+</p>
+
+<b><font size="+1">Auto-Encoder Neural Network</font></b>
+<p>
 	
 
 
@@ -303,11 +327,9 @@ So far, we have tried Logistic Regression, Random Forest, and XGBoost together w
 
 
 
-
-
-
-
+	
 </p>
+
 
 
 
