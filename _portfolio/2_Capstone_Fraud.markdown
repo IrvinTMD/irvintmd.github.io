@@ -272,7 +272,32 @@ So far, we have tried Logistic Regression, Random Forest, and XGBoost together w
 	<br>
 	<b>How does this happen?</b> Similar to before, we randomly select 492 rows from the over-represented class, join it with our 492 fraud cases, and here we have one dataset for training. We repeat this process for k number of times. Each time, we will be getting different sets of 492 normal transactions. Therefore, we will have k number of datasets and each of them will be modelled separately. We then take each individual model's prediction, ensemble them, and acquire new predictions! For example, we can do this 10 times for Logistic Regression, 10 times for Random Forests, and 10 times for XGBoost, then ensemble them. The possibilities are endless.<br>
 	<br>
-	<b>How can we build on that?</b> We can even refine this further by altering the class ratio within each dataset. Currently, all k of our datasets have a 50/50 class ratio. We can tune that by having some datasets to contain 25/75, 40/60 etc. class ratio. This ..
+	<b>How can we build on that?</b> We can even refine this further by altering the class ratio within each dataset. Currently, all k of our datasets have a 50/50 class ratio. We can tune that by having some datasets contain class ratio of 25/75, 40/60 etc. This way, the weights for each class will vary in different trained models, and perhaps giving us a more balanced outcome when testing.<br>
+	<br>
+	We will be running an ensemble model plus an ensemble model with ratio adjustment on all methods we have tried above; Logisitic Regression, Random Forest, and XGBoost.<br>
+	<br>
+
+	<b>Logistic Regression Ensemble Sampling</b>
+	<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/ensem_lr.jpg" alt="" title="Ensemble Sampling with Logistic Regression"/>
+	</div>
+	<div class="col three caption">
+		Ensemble Sampling with Logistic Regression.
+	</div>
+	<br>
+	<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/ensem_lr_ratio.jpg" alt="" title="Ensemble Sampling + Ratio Adjustment with Logistic Regression"/>
+	</div>
+	<div class="col three caption">
+		Ensemble Sampling + Ratio Adjustment with Logistic Regression.
+	</div>
+	<br>
+	Gradual improvement! Our first ensemble model did better than its single counterpart by a reduction of about 900 False Positives and gave a precision score of about 0.09. Recall score did not change though. After ensembling, the precision score increased slightly. Things are looking good. Random Forest and XGBoost should perform much better than this.<br>
+	<br>
+	<b>Random Forest Ensemble Sampling</b>
+	
+
+
 
 
 
