@@ -612,7 +612,42 @@ The first and last lines of time.time() shows us how long the entire training to
     First 25 Epochs of the reconstruction error.
 </div>
 <br>
-The figure only shows the reconstruction error of the first 25 epochs. The error reduces rather quickly and slows down 0.09. Thereafter, the training ran and completed 200 epochs which further reduced the error to about 0.82 where it seemed to stagnate (view in Jupyter Notebook). I'll be attempting even more epochs to see what's the true minimum it can reach!
+The figure only shows the reconstruction error of the first 25 epochs. The error reduces rather quickly and slows down after 0.09. Thereafter, the training ran and completed 1000 epochs which further reduced the error to about 0.81 where it seemed to stagnate (view in Jupyter Notebook).<br>
+
+<div class="img_row">
+    <img class="col three" src="{{ site.baseurl }}/img/rbm_u1.jpg" alt="" title="User1's Recommendations"/>
+</div>
+<div class="col three caption">
+    User1's Recommendations and Ratings.
+</div>
+<br>
+Now that our training has reached stability, we check its performance by generating recommendations. The first table above shows the machine's recommendations, and the second table shows the user's rated books. For both tables, we can see the predicted ratings of our machine from the column "Recommendation Score".<br>
+<br>
+Please feel free to look up these books to find out what they are! I have done so and discovered that the user rated highly books about Romance. The books that our model recommended belonged to Romance as well, which also coincides with our matrix factorisation model. That's good to know.
+<br>
+
+<b><font size="+1">Evaluation</font></b>
+<p>
+    Thus far, we ran 3 models which gave us fairly similar results.<br>
+    <ul>
+        <li>Matrix Factorisation optimised by ALS/SGD</li>
+        <li>Multiple Surprise package models</li>
+        <li>Restricted Boltzmann Machine</li>
+    </ul>
+    While these have given good results, this is far from the end-all. The next immediate step would be to <b>blend</b> the models (merge) and get the best of each. Like the Netflix prize, the winning entries were blended with hundreds of models. Such extensive blending is not feasible for production, but it shows us what we can achieve. Extensive blending had very marginal improvements to the deep decimal places. Ultimately, Netflix adopted a more simplified model which was a couple of blends between Matrix Factorisation and RBM. In fact, this was enough to obtain a great accuracy. The marginal improvements of extensive blending were not worth the additional effort and computation to put them into production.<br>
+    <br>
+    Now, we can say that we are confident to build an accurate Recommender System based on explicit feedback from users. This is only a part of an entire Recommender System though. What we have done is Collaborative Filtering. A wholesome RecSys would have much more than that which includes Content Based Filtering as well. Content Based filters based on item features, and there are several ways to do that. <b>Wide and Deep neural networks</b> are a great way to model this. In addition, current industry practices value implicit feedback more. It's almost impossible to get a public dataset on this. Implicit feedback are features like whether or not a user clicks on something, how long a user watched something, whether a user watched something, etc. Moreover, more systems are moving toward a 'binary' rating (thumbs up or thumbs down) instead of a Likert scale (1 to 5). There is a lower tendency for people to rate on the Likert scale because of the time/effort required to decide. A thumbs up or thumbs down is much easier and faster. Of course, companies can afford to do this because they have implicit data about the user which is more valuable. Now doesn't it feel like we have barely scratched the surface? While there is indeed lots more to dive into, we have built a solid foundation on understanding how matrix factorisation works, and how to code a neural network like Restricted Boltzmann Machines. We established deeper understanding about the Math behind these algorithms from the countless research papers and journal articles that we have read. These tools are definitely transferable! As long as we are able to redefine the Math equations, and code our equations into python classes or neural networks (like what we did in this project), then we will be able to <b>solve</b> our next Recommender System problem.
+</p>
+
+<b><font size="+1">Future Work</font></b>
+<p>
+    I'm excited to try Content Based methods, which include Approximate Nearest Neighbours, definitely Wide and Deep networks.<br>
+    <br>
+    Moving on, I would want to try Deep Matrix Factorisation using TensorFlow and/or Apache MXNet. Recent attempts have shown that deep learning allows to learn more sophisticated models which can take in more complicated inputs (as compared to traditional matrix factorisation), potentially yielding additional insight into the task. As Andrew Ng mentioned, A.I. is the new electricity. Therefore, more work will go into exploring RecSys through deep learning. On a different note, Graph solutions like neo4j is worth exploring too.
+</p>
+
+
+
 
 
 
