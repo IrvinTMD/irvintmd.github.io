@@ -16,7 +16,7 @@ My current interest lies in Anomaly Detection, Recommender Systems, and Predicti
 Python, Machine Learning, Deep Learning, TensorFlow, Recommender System, Anomaly Detection<br>
 Supervised/Unsupervised Learning, Dimensionality Reduction, Hypothesis Testing, Feature 
 Engineering, Regularisation, Optimisation, Web Scraping<br>
-SQL, PostGres, Hadoop, Spark, AWS, Google Cloud
+SQL, PostGres, Hadoop, Spark, AWS
 
 
 <br/>
