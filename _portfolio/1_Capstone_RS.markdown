@@ -449,7 +449,7 @@ category. Most of them were Literature/Fiction, and Romance. Let's look at the r
 for two users; user1 has the most ratings, and user2, the least.<br>
 
 <h4>User1</h4>
-<div class="img_row">
+<div class="img_row" id="user1">
 	<img class="col three" src="{{ site.baseurl }}/img/user1.jpg" alt="" title="Recommendations VS User1's actual rated books"/>
 </div>
 <div class="col three caption">
