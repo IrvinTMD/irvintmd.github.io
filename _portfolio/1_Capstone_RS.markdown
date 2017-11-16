@@ -614,7 +614,7 @@ The first and last lines of time.time() shows us how long the entire training to
 <br>
 The figure only shows the reconstruction error of the first 25 epochs. The error reduces rather quickly and slows down after 0.09. Thereafter, the training ran and completed 1000 epochs which further reduced the error to about 0.81 where it seemed to stagnate (view in Jupyter Notebook).<br>
 
-<div class="img_row">
+<div class="img_row" id="rbm_user1">
     <img class="col three" src="{{ site.baseurl }}/img/rbm_u1.jpg" alt="" title="User1's Recommendations"/>
 </div>
 <div class="col three caption">
