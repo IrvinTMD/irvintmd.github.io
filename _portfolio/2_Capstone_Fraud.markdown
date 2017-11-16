@@ -297,7 +297,7 @@ So far, we have tried Logistic Regression, Random Forest, and XGBoost together w
 	<b>Random Forest Ensemble Sampling</b>
 	Our Forest hyperparameters were obtained through empirical testing and gridsearch. The class weight was set to 0.1 for the normal class (0) as we want the model to place more weights on our fraud cases (1). We don't want to miss out any fraud cases.<br>
 
-	<div class="img_row">
+	<div class="img_row" id="rf_ensemble">
 	<img class="col three" src="{{ site.baseurl }}/img/ensem_rf_ratio.jpg" alt="" title="Ensemble Sampling + Ratio Adjustment with Random Forest"/>
 	</div>
 	<div class="col three caption">
@@ -319,6 +319,7 @@ So far, we have tried Logistic Regression, Random Forest, and XGBoost together w
 
 <b><font size="+1">Auto-Encoder Neural Network</font></b>
 <p>
+
 	
 
 
