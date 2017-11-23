@@ -42,6 +42,10 @@ November 17, 2017<br>
 		<li>Ensemble Sampling</li>
 		<li>Autoencoder Neural Net</li>
 		<li>Cost Sensitive Learning</li>
+		<li>Clustering</li>
+		<li>Isolation Forest</li>
+		<li>One-Class Support Vector Machine (SVM)</li>
+		<li>White Magic / Dark Art Ensemble</li>
 	</ul>
 </p>
 
