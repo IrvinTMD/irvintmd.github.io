@@ -7,7 +7,7 @@ permalink: /about/
 <img class="col one right" src="/img/prof_pic.jpg">
 
 <br/>
-I am <a href="http://linkedin.com/in/irvintmd" target="blank">Irvin</a>. (<a href="http://irvintmd.github.io/IrvinTanMD_resume.pdf">resume</a>)<br>
+I am <a href="http://linkedin.com/in/irvintmd" target="blank">Irvin</a>.<br>
 <br>
 I am a curious data scientist who is embarking on a journey to make my mark in the field. I aim to solve global issues in the further future. <br>
 <br>
@@ -16,7 +16,9 @@ My current interest lies in Anomaly Detection, Recommender Systems, and Predicti
 Python, Machine Learning, Deep Learning, TensorFlow, Recommender System, Anomaly Detection<br>
 Supervised/Unsupervised Learning, Dimensionality Reduction, Hypothesis Testing, Feature 
 Engineering, Regularisation, Optimisation, Web Scraping<br>
-SQL, PostGres, Hadoop, Spark, AWS
+SQL, PostGres, Hadoop, Spark, AWS<br>
+<br>
+<p>Here's my <a href="http://irvintmd.github.io/IrvinTanMD_resume.pdf">resume</a>.</p>
 
 
 <br/>
