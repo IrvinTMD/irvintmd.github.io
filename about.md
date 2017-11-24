@@ -8,7 +8,7 @@ permalink: /about/
 
 <br/>
 I am <a href="http://linkedin.com/in/irvintmd" target="blank">Irvin</a>.<br>
-<br>
+<br> <a href="http://irvintmd.github.io/IrvinTanMD_resume.pdf"></a>
 I am a curious data scientist who is embarking on a journey to make my mark in the field. I aim to solve global issues in the further future. <br>
 <br>
 My current interest lies in Anomaly Detection, Recommender Systems, and Predictive Modelling. <br>
