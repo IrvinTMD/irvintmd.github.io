@@ -7,7 +7,7 @@ permalink: /about/
 <img class="col one right" src="/img/prof_pic.jpg">
 
 <br/>
-I am <a href="http://linkedin.com/in/irvintmd" target="blank">Irvin</a>. <a href="http://irvintmd.github.io/IrvinTanMD_resume.pdf">(resume)</a><br>
+I am <a href="http://linkedin.com/in/irvintmd" target="blank">Irvin</a>. (<a href="http://irvintmd.github.io/IrvinTanMD_resume.pdf">resume</a>)<br>
 <br>
 I am a curious data scientist who is embarking on a journey to make my mark in the field. I aim to solve global issues in the further future. <br>
 <br>
