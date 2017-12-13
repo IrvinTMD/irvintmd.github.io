@@ -17,7 +17,7 @@ Python, Machine Learning, Deep Learning, TensorFlow, Recommender System, Anomaly
 Supervised/Unsupervised Learning, Dimensionality Reduction, Hypothesis Testing, Feature 
 Engineering, Regularisation, Optimisation, Web Scraping<br>
 SQL, PostGres, Hadoop, Spark, AWS<br>
-<p>Here's my <a href="http://irvintmd.github.io/IrvinTanMD_resume.pdf">resume</a>.</p>
+<p>Here's my <a href="http://irvintmd.github.io/IrvinTMD_Resume.pdf">resume</a>.</p>
 
 
 <br/>
